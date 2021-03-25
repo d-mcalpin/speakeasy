@@ -3,11 +3,13 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.db.models import Avg
 
-from .models import Product, Category
-from .forms import ProductForm
+from .models import Product, Category, ProductReview
+from .forms import ProductForm, ProductReviewForm
 
 # Create your views here.
+
 
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
@@ -64,11 +66,60 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
+    if request.method == 'POST':
+        product_review_form = ProductReviewForm(data=request.POST)
+        if product_review_form.is_valid():
+            # Create Review object but don't save to database yet
+            new_review = product_review_form.save(commit=False)
+            # Assign the current review to the product
+            new_review.product_id = product
+            # Save the review to the database
+            new_review.save()
+            product_review_form = ProductReviewForm()
+            messages.success(request, 'Successfully posted your review.')
+
+            if 'last_item' in request.session:
+                del request.session['last_item']
+
+    else:
+        product_review_form = ProductReviewForm()
+
+    product_reviews = ProductReview.objects.filter(product_id_id=product_id)
+
+    if product_reviews:
+        average_score = round(product_reviews.all().aggregate(
+                        Avg('rating_score'))['rating_score__avg'], 2)
+        average_score_percentage = average_score/5*100
+    else:
+        average_score = "-"
+        average_score_percentage = 0
+
     context = {
         'product': product,
+        'product_reviews': product_reviews,
+        'product_review_form': product_review_form,
+        'average_score': average_score,
+        'average_score_percentage': average_score_percentage,
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+@login_required
+def delete_review(request, review_pk):
+    """
+    Delete a review posted by the user
+    """
+    review = get_object_or_404(ProductReview, pk=review_pk)
+    product_pk = review.product_id.pk
+    review.delete()
+
+    if 'last_item' in request.session:
+        del request.session['last_item']
+
+    messages.success(request,
+                     'Succesfully deleted your review.')
+    return redirect(product_detail, product_pk)
 
 
 @login_required
