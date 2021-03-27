@@ -25,3 +25,20 @@ def wishlist(request):
     return render(request, "wishlists/wishlist.html", context)
 
 
+@login_required
+def add_to_wishlist(request, product_id):
+    """
+    Add selected product to user's wishlist
+    """
+    product = get_object_or_404(Product, pk=product_id)
+    user = get_object_or_404(UserProfile, user=request.user)
+    redirect_url = request.POST.get("redirect_url")
+    wishlist, created = Wishlist.objects.get_or_create(user_profile=user)
+
+    if product in wishlist.products.all():
+        messages.info(request, f"{ product.name } is already on your wishlist")
+        return redirect(redirect_url)
+    else:
+        wishlist.products.add(product)
+        messages.success(request, f"{ product.name } added to your wishlist")
+        return redirect(redirect_url)
