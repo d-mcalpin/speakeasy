@@ -42,3 +42,34 @@ def add_to_wishlist(request, product_id):
         wishlist.products.add(product)
         messages.success(request, f"{ product.name } added to your wishlist")
         return redirect(redirect_url)
+
+
+@login_required
+def remove_from_wishlist(request, product_id):
+    """
+    Remove selected product from user's wishlist
+    """
+    product = get_object_or_404(Product, pk=product_id)
+    user = get_object_or_404(UserProfile, user=request.user)
+    redirect_url = request.POST.get("redirect_url")
+    wishlist = get_object_or_404(Wishlist, user_profile=user)
+    if product in wishlist.products.all():
+        wishlist.products.remove(product)
+        messages.success(request,
+                         f"{ product.name } removed from your wishlist")
+        return redirect(redirect_url)
+    else:
+        messages.error(request, f"{ product.name } was not on your wishlist")
+        return redirect(redirect_url)
+
+
+@login_required
+def delete_wishlist(request):
+    """
+    Delete entire wishlist
+    """
+    user = get_object_or_404(UserProfile, user=request.user)
+    redirect_url = request.POST.get("redirect_url")
+    wishlist = get_object_or_404(Wishlist, user_profile=user)
+    wishlist.products.clear()
+    return redirect(redirect_url)
