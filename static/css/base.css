@@ -434,3 +434,10 @@ padding-left: 10px;
 .container-wrapper-blue {
   background-color: rgba(87, 202, 255, 1);
 }
+
+.content {
+  min-height: calc(100vh - 70px);
+}
+.footer {
+  height: 50px;
+}
