@@ -3,6 +3,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile
 from .forms import UserProfileForm
+from products.models import Product
+from wishlists.models import Wishlist
 
 from checkout.models import Order
 
@@ -11,6 +13,9 @@ from checkout.models import Order
 def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
+    wishlist, created = Wishlist.objects.get_or_create(user_profile=profile)
+    wishlisted_products = Product.objects.filter(
+        wishlist__user_profile=profile)
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
@@ -27,6 +32,7 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
+        "wishlisted_products": wishlisted_products,
         'on_profile_page': True
     }
 

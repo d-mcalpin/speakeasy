@@ -369,3 +369,7 @@ input[name='q']::placeholder {
 .card-header-review-extension {
     background-color: white !important;
 }
+
+.wishlist-info {
+    margin-top: 50px;
+}
