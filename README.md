@@ -69,7 +69,7 @@ Speakeasy Cocktail's primary target market is cocktail enthusiasts. We hope to e
 
 - Viewing and Navigation
 
-| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| AS A     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
 | Site User/ Shopper | access the website with any devices | Use the website anytime and anywhere |
 | Shopper | Easily see what services are offered | Find the service I want to use |  
@@ -80,7 +80,7 @@ Speakeasy Cocktail's primary target market is cocktail enthusiasts. We hope to e
 
 - Registration, User Accounts and User Community
 
-| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| AS A     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
 | Site User | Easily register for an account | Have a personal account where I can edit my information |  
 | Site User | View my order history | Purchase the same product again in the next order |
@@ -92,7 +92,7 @@ Speakeasy Cocktail's primary target market is cocktail enthusiasts. We hope to e
 
 - Online shopping
 
-| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| AS A    | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
 | Shopper | Search a product with keywords | Find the most appropriate products |
 | Shopper | View individual product pages that have prices, descriptions, sizes, etc | Get detailed information about the product before purchasing |
@@ -105,12 +105,27 @@ Speakeasy Cocktail's primary target market is cocktail enthusiasts. We hope to e
 
 - Cart, Purchasing and Checkout
 
-| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| AS A     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
-| Shopper | Easily select the quantity and the color (if applicable) of a product after adding a product to a cart | Ensure I don't accidentally select the wrong product and the quantity | 
+| Shopper | Easily select the quantity and size (if applicable) of a product after adding a product to a cart | Ensure I don't accidentally select the wrong product and the quantity | 
 | Shopper | The delivery information is prefilled if logged in | Smoothly proceed with my purchase | 
 | Shopper | Automatically suggest to log in if I did not log in | Smoothly proceed with my purchase | 
 
 <br/>
 
 <div><a href="#table-of-contents">Back to top</a></div>
+
+## Design
+### Wireframes
+Wireframes were created with [balsamiq](https://balsamiq.com/) and [moqups](https://moqups.com/).
+You can find the wireframes [here](#).
+
+### Brand Identity
+- Vision: Excellent cocktails delivered to users through a visually appealing online store
+- Mission: Provide a wide range of cocktails for guests to enjoy which can be purchased with a couple of clicks online. Be a supplier of cocktail equipment so guests can enjoy the art of cocktail making at home, without the hassle of going to a physical shops.
+- Values: 1.Happiness - Improve your happiness with the power of nature, 2.Elegance - Appreciate everything around you in everyday life, 3.Nature - Inspired by the natural world and its beauty, 4.Creative - Express your creativity in flower arrangements
+
+### Color Scheme
+Color scheme is important as this is one of the first things site visitors notice when visiting the site. I chose white / black for the site's primary colors because these colors match the secondary earthy colors and make the website look professional and high-end. In addition to that, for the secondary colors of the site, I wanted to create a natural / delicate atmosphere to represent the calming sensation of flowers. For the secondary colors, I used [Coolors.co](https://coolors.co/) to create a color pallet, which you can find below.
+
+<p align="center"><img src = "#"></p>
