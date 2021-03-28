@@ -123,9 +123,65 @@ You can find the wireframes [here](#).
 ### Brand Identity
 - Vision: Excellent cocktails delivered to users through a visually appealing online store
 - Mission: Provide a wide range of cocktails for guests to enjoy which can be purchased with a couple of clicks online. Be a supplier of cocktail equipment so guests can enjoy the art of cocktail making at home, without the hassle of going to a physical shops.
-- Values: 1.Happiness - Improve your happiness with the power of nature, 2.Elegance - Appreciate everything around you in everyday life, 3.Nature - Inspired by the natural world and its beauty, 4.Creative - Express your creativity in flower arrangements
 
 ### Color Scheme
 Color scheme is important as this is one of the first things site visitors notice when visiting the site. I chose white / black for the site's primary colors because these colors match the secondary earthy colors and make the website look professional and high-end. In addition to that, for the secondary colors of the site, I wanted to create a natural / delicate atmosphere to represent the calming sensation of flowers. For the secondary colors, I used [Coolors.co](https://coolors.co/) to create a color pallet, which you can find below.
 
 <p align="center"><img src = "#"></p>
+
+### Typography
+
+- Icon: [FontAwesome](https://fontawesome.com/) is used for the main icon library accross the site.
+- Favicon: I got the favicon by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](https://www.flaticon.com/).
+
+### Brand Logo
+Logo design is the cornerstone in your brand identity and presents a company's name, product and brand. I used [Canva](https://www.canva.com/en_gb/) to create the brand logo file. The font represents the brand value `elegance` and the image of a branch at the top was added to represent `Nature` brand value.
+<p align="center"><img src = ""></p>
+
+<div "text-align: right;"><a href="#table-of-contents">Back to top</a></div>
+
+# Features
+
+## Existing Features
+This website is composed of 7 applications: `home`, `bag`, `checkout`, `products`, `profiles`, 'contact' and 'wishlists'
+
+## Landing Page
+The Speakeasy Landing Page or Homepage is designed as a single page website to provide site visitors with enough information so they can understand what the business is about of this site. This page has minimal amount of information to let the site visitors take next actions. The page compose of `Navbar`, `Carousel`, `About`, `Why Choose Us?`, `testimonials` and `Contact Form` section. As scrolling down on thie page, the elements are smoothly being placed by [Animate.css](https://animate.style/) and [wow.js](https://wowjs.uk/docs) animation effects to give a dynamic and sophisticated experience to the site visitors.
+
+### Navbar
+Navbar is fixed at the top of pages across the site, so that the site visitors easily navigate the whole site.  Navbar contains  `Brand Logo`, `Search Box`, `Site Menu`, `My Account dropdown` and `Cart icon`.
+- Search box: This search box function allows the visitors to search the products on online shop with keywords. The keywords are searched over `name` and `descriotion` field of Product Model, `name` field of Color Model and `name` field of Flower Model.(Details of these models will be described at the [Information Architecture](#information-architecture)) This function uses "OR" condition not "AND" when searching the keywords, meaning, if the search query was "Tulip Rose", the search result shows the product found using the keyword "Tulip" OR "Rose". Searching with "OR" condition is chosen in order not to limit the possibilities for the products the potential customers want to purchase.
+- Site Menu & My Account dropdown: The site menu collapses to toggle icon less than 992px width. My Account dropdown is included to toggle menu for smaller screen.
+- Cart icon: The number next to the cart icon shows the total of items added to the cart.
+
+
+Navbar for larger screensizes (width > 992px)
+<div align="center"><img src = "#" width=900></div>
+
+Navbar for smaller screensizes (width < 992px)
+<div align="center"><img src = "" width=900></div>
+
+Navbar for authenticated users
+<div align="center"><img src = "" width=900></div>
+
+
+
+<div align="center"><img src = "" width=700></div>
+
+### About Us & Why Choose Us?
+`About Us` section explains what the business is and the brief history of the shop to the site visitor.
+<div align="center"><img src = "" width=700></div>
+
+`Why Choose Us?` section showcases three sales points of the shop with icons representing each one.
+
+<div align="center"><img src = "" width=700></div>
+
+
+### Contact Form
+A simple contact form is placed at the end of the landing page. The email address field is prefilled if the users are logged into their account. Site visitors will fill out fields `name`, `email`, `subject` and `message` when they submit the form. An email with the inquiry from the form will be sent to the admin of the website (handling by django send_mail() functionality).
+<div align="center"><img src = "" width=700></div>
+
+### Footer
+The footer section consists of two sections: 1. General information of the Shop and Quick Link, 2. Social Media icons.
+1. General Info and Quick Links: The first footer section includes the shop address and its opening hours and quick links to the pages within the site.
+<div align="center"><img src = "" width=700></div>
