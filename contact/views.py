@@ -19,7 +19,7 @@ def contact_us(request):
                 send_mail(subject,
                           message,
                           from_email,
-                          ["boardgameempireshop@gmail.com"]
+                          ["cocktail.delivery.speakeasy@gmail.com"]
                           )
                 messages.success(request, "Email sent!")
             except BadHeaderError:
@@ -35,8 +35,8 @@ def contact_us(request):
         "form": form,
     }
 
-    return render(request, "about/contact.html", context)
+    return render(request, "contact/contact.html", context)
 
 
 def contact_success(request):
-    return render(request, "about/contact-success.html")
+    return render(request, "contact/contact-success.html")

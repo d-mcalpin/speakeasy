@@ -1,47 +1,56 @@
-<footer>
-    <div id="footer">
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row footer-row">
-                    <div class="col-sm-12 col-md-6 col-lg-3 no-padding">
-                        <a href="{% url 'products' %}" class="footer-link mb-7">Shop</a>
-                        <a href="{#}" class="footer-link mb-7-mob">Contact <span class="footer-link-brand">Speakeasy</span></a>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-3 no-padding order-md-3 order-lg-2">
-                        <a href="{% url 'account_login' %}" class="footer-link mb-7">Log In</a>
-                        <a href="{% url 'account_signup' %}" class="footer-link mb-15-mob">Register</a>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-3 no-padding order-md-2 order-lg-3">
-                        <p class="mb-7">© 2021 ECOSiO</p>
-                        <p>Hauptstr. 678 Berlin</p>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-3 no-padding order-md-4 order-lg-4">
-                        <div class="social-media">
-                            <div class="div-footer-some">
-                                <a href="https://www.facebook.com" class="some-link" target="_blank">
-                                    <img src="{{ STATIC_URL }}images/icons/social-media/icon-facebook.svg" alt="Facebook icon">
-                                </a>
-                            </div>
-                            <div class="div-footer-some">
-                                <a href="https://www.instagram.com" class="some-link" target="_blank">
-                                    <img src="{{ STATIC_URL }}images/icons/social-media/icon-instagram.svg" alt="Instagram icon">
-                                </a>
-                            </div>
-                            <div class="div-footer-some">
-                                <a href="https://www.pinterest.com" class="some-link" target="_blank">
-                                    <img src="{{ STATIC_URL }}images/icons/social-media/icon-pinterest.svg" alt="Pinterest icon">
-                                </a>
-                            </div>
-                            <div class="div-footer-some">
-                                <a href="https://www.linkedin.com" class="some-link" target="_blank">
-                                    <img src="{{ STATIC_URL }}images/icons/social-media/icon-linkedin.svg" alt="Linkedin icon">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-line line d-none d-lg-block">
-                </div>
+<footer class="container-fluid container-wrapper-blue">
+    <div class="row text-center">
+        <div class="col-sm-4 footer-item">
+            <h2>
+                <a href="{% url 'contact_us' %}"><i class="far fa-address-card" aria-hidden="true"></i> Contact Us</a>
+            </h2>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-map-marker-alt"></i> Speakeasy Cocktails</li>
+                <li>Midleton</li>
+                <li>Co. Cork</li>
+                <li>Ireland</li>
+                <li></li>
+                <li>
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel: 021 -2578000" class="footer-contact">021 -2578000</a>
+                </li>
+            </ul>
+        </div>
+        <!------------------------------Shop Now------------------------------>
+        <div class="col-sm-4 footer-item-weather text-center">
+
+        </div>
+        <div class="col-sm-4 footer-item">
+            <h2>
+                <i class="fas fa-hashtag" aria-hidden="true"></i> Connect With Us
+            </h2>
+            <div class="social-links">
+                <ul class="list-unstyled social">
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com" target="_blank">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.twitter.com" target="_blank">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.linkedin.com" target="_blank">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                            <span class="sr-only">LinkedIn</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com" target="_blank">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

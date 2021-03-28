@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_title %}Contact Us{% endblock %}
+{% block content %}
+<div class="overlay"></div>
+<div class="container bg-sheer-white text-brown">
+    <h1 class="small-caps bold">Contact Us</h1>
+    <div class="row">
+        <div class="col s12">
+            <form action="{% url 'contact_us' %}" method="POST" class="contact-form">
+                {% csrf_token %}
+                {{ form| crispy }}
+                <!--Crispy form missing a closing div tag-->
+                <div class="center-align">
+                    <button class="btn btn-black rounded-0 text-uppercase mt-5 block" id="submit-review-btn" type="submit" name="action">
+                        <i class="fas fa-envelope"></i> Send Mail
+                    </button>
+                    <a href="/" class="btn btn-black rounded-0 text-uppercase mt-5"><i class="fas fa-store-alt"></i> Back to homepage</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
