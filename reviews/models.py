@@ -1,6 +1,6 @@
 from django.db import models
 
-from profiles.models import Profile
+from profiles.models import UserProfile
 from products.models import Product
 
 
@@ -18,7 +18,7 @@ class Review(models.Model):
         (5, '5'),
     ]
 
-    user = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     title = models.CharField(max_length=50)
     description = models.TextField()
