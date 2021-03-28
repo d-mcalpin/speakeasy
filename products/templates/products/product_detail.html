@@ -132,13 +132,94 @@
                         {% endwith %}
                     </div>
                 </form>
+                <div class="mb-3 mt-3">
+                    <div class="ml-3 mt-2 mb-2">
+                        <span>Customer Average Score:
+                            <span class="store-text-large">{{ average_score }} / 5.0</span>
+                        </span>
+                        <span class="stars-outer">
+                            <span class="stars-inner" style="width: {{ average_score_percentage }}%"></span>
+                        </span>
+                    </div>
+                    <hr>
+                    <div id="accordion">
+                        <div class="card card-review-extension">
+                            <div class="card-header card-header-review-extension" id="headingOne">
+                                <div class="collapsed review_click_arrow_1" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
+                                    role="button">
+                                    <h6 class="mb-0">View Reviews <i class="fas fa-chevron-down"></i></h6>
+                                </div>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    {% if product_reviews %}
+                                    {% for review in product_reviews %}
+                                    <div>
+                                        <span>{{ review.review_title }} </span>
+                                        <span class="stars-outer">
+                                            <span class="stars-inner" style="width: {{ review.review_rate }}%"></span>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        {{ review.review_date }}
+                                    </div>
+                                    <div>
+                                        {% if request.user.is_authenticated %}
+                                        {% if user.name == review.user_id %}
+                                        <a href="{% url 'delete_review' review.pk %}" class="product_delete">Delete
+                                            Review</a>
+                                        {% endif %}
+                                        {% endif %}
+                                    </div>
+                                    <div>
+                                        {{ review.review_comment }}
+                                    </div>
+                                    <hr>
+                                    {% endfor %}
+                                    {% else %}
+                                    <div>
+                                        <p>No Customer Reviews</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        {% if user.is_authenticated %}
+                        <div class="card card-review-extension">
+                            <div class="card-header card-header-review-extension" id="headingTwo">
+                                <div class="collapsed review_click_arrow_2" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                                    role="button">
+                                    <h6 class="mb-0">Leave A Review <i class="fas fa-chevron-down"></i></h6>
+                                </div>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    <form class="form" action="{% url 'product_detail' product.pk %}" method="POST">
+                                        {% csrf_token %}
+                                        {{ product_review_form|crispy }}
+                                        <button class="btn btn-black" action="submit"
+                                            aria-label="Product Review Submit Button">Submit Review</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        {% else %}
+                        <div class="mt-4">
+                            <p>To leave a review, please
+                                <a href="{% url 'account_login' %}">log in.</a>
+                            </p>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-    <hr>
-    <!-- Render each product reviews here by including reviews code -->
-    {% include 'reviews/includes/reviews.html' %}
 {% endblock %}
 
 {% block postloadjs %}
