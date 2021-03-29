@@ -438,8 +438,10 @@ padding-left: 10px;
 .content {
   min-height: calc(100vh - 70px);
 }
+
 .footer {
   height: 50px;
+  margin-top: 50px;
 }
 
 .wishlist-icon {
@@ -453,6 +455,24 @@ padding-left: 10px;
 }
 
 .main-text {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.about-us {
+    margin-top: 80px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.wishlist-nav {
+    padding: 0;
+}
+
+.wishlist-container {
+    margin-bottom: 250px;
+}
+
+.contact-container {
+    padding-bottom: 20px;
 }

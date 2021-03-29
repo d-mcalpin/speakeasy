@@ -169,7 +169,7 @@ Navbar for authenticated users
 <div align="center"><img src = "" width=700></div>
 
 ### About Us & Why Choose Us?
-`About Us` section explains what the business is and the brief history of the shop to the site visitor.
+`About Us` section explains what the business is and the brief introduction on how to shop on the site.
 <div align="center"><img src = "" width=700></div>
 
 `Why Choose Us?` section showcases three sales points of the shop with icons representing each one.

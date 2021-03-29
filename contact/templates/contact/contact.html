@@ -15,7 +15,7 @@
 <div class="container bg-sheer-white text-brown">
     <h1 class="small-caps bold">Contact Us</h1>
     <div class="row">
-        <div class="col s12">
+        <div class="col s12 contact-container">
             <form action="{% url 'contact_us' %}" method="POST" class="contact-form">
                 {% csrf_token %}
                 {{ form| crispy }}

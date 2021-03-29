@@ -12,9 +12,9 @@
 {% block content %}
 <div class="overlay"></div>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col text-center mt-3">
-            <h2 class="logo-font">Products</h2>
+    <div class="row text-center">
+        <div class="col text-center mt-3 wishlist-container">
+            <h2 class="logo-font">Wishlist</h2>
             {% if wishlisted_products %}
             {% for c in current_categories %}
             <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
@@ -23,26 +23,26 @@
             </a>
             {% endfor %}
             <hr class="w-50 mb-1">
-            <ul>
-        <li class="list-inline-item">
-            <a href="{% url 'profile' %}" class="btn btn-outline-black rounded-0 mt-5 qty-submit margin-t1"><i
-                    class="fas fa-user"></i> To User Profile</a>
-        </li>
-        <li class="list-inline-item">
-            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5 qty-submit margin-t1"><i
-                    class="fas fa-store-alt prefix"></i> Continue Shopping</a>
-        </li>
-        <li class="list-inline-item">
-            <form class="form" method="POST" action="{% url 'delete_wishlist' %}">
-                {% csrf_token %}
-                <button class="btn btn-outline-black rounded-0 mt-5 qty-submit margin-t1 block" id="delete-wishlist-btn"
-                    type="submit" name="action">
-                    <i class="fas fa-trash-alt"></i> Delete Wishlist
-                </button>
-                <input type="hidden" name="redirect_url" value="{{ request.path }}">
-            </form>
-        </li>
-    </ul>
+            <ul class="wishlist-nav">
+                <li class="list-inline-item">
+                    <a href="{% url 'profile' %}" class="btn btn-outline-black rounded-0 mt-1 qty-submit margin-t1"><i
+                            class="fas fa-user"></i> To User Profile</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-1 qty-submit margin-t1"><i
+                            class="fas fa-store-alt prefix"></i> Continue Shopping</a>
+                </li>
+                <li class="list-inline-item">
+                    <form class="form" method="POST" action="{% url 'delete_wishlist' %}">
+                        {% csrf_token %}
+                        <button class="btn btn-outline-black rounded-0 qty-submit mt-1 block" id="delete-wishlist-btn"
+                            type="submit" name="action">
+                            <i class="fas fa-trash-alt"></i> Delete Wishlist
+                        </button>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </form>
+                </li>
+            </ul>
         </div>
     </div>
     <div class="row">
@@ -154,7 +154,7 @@
                 {% endfor %}
             </div>
         </div>
-         {% else %}
+        {% else %}
         <div class="col s12 center-align">
             <p>Your wishlist is currently empty.</p>
             <a href="{% url 'products' %}" class="btn btn-black"> Browse all products</a>
