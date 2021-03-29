@@ -172,8 +172,6 @@ Navbar for authenticated users
 <div align="center"><img src = "" width=700></div>
 
 
-
-
 ### Footer
 The footer section consists of two sections: 1. General information about Speakeasy Cocktails and 2. Social Media icons.
 1. General Info: The first footer section includes the physical address of Speakeasy Cocktails and along with a phone number and link to 'Contact Us'.
@@ -202,6 +200,7 @@ Product Card
 
 - Product Image: On the left side of the Product Details page (product_detail.html), the product images are shown. When there are several images for the product, for example, some products have color options such as Carnation, the options will be shown under the main image.
 - Product Information: On the right side of the product detail page, there is a `Product Name`, `Price`, `Description`, `Color` option, `Quantity`, `Add to Cart` button. `Color` option is only visible when the product has the options. Also for superuser, Edit / Delete option will be shown.
+- Prouct Wishlist Section
 - Product Review Section: Customers can see the product scores and review messages by other customers. The users can leave a score from 1 to 5, and the average of the scores of the customer reviews is shown on the product page. To leave a product review, the user is asked to log in to their account. Also, to delete a review, the customer who left the review needs to log in and the delete option will be visible next to the review after logging in. At the moment, regardless of whether they have purchase history or not, the user is able to leave a review. This is one of the features left to implement to limit it so only the user who actually purchased the product will be allowed to review.
 
 <div align="center"><img src = "#" width=700></div>
