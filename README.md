@@ -32,8 +32,6 @@
 ## Summary
 Speakeasy Cocktails is an online coctail retailer, which specialises in delivering ready to drink cocktails and bar equipment direct to your home.
 
-## Background
-
 ## Aim of the Site
 Finding delicious cocktails can sometimes be tricky, particularly if you have to make them yourself.
 
@@ -146,13 +144,14 @@ Logo design is the cornerstone in your brand identity and presents a company's n
 This website is composed of 7 applications: `home`, `bag`, `checkout`, `products`, `profiles`, 'contact' and 'wishlists'
 
 ## Landing Page
-The Speakeasy Landing Page or Homepage is designed as a single page website to provide site visitors with enough information so they can understand what the business is about of this site. This page has minimal amount of information to let the site visitors take next actions. The page compose of `Navbar`, `Carousel`, `About`, `Why Choose Us?`, `testimonials` and `Contact Form` section. As scrolling down on thie page, the elements are smoothly being placed by [Animate.css](https://animate.style/) and [wow.js](https://wowjs.uk/docs) animation effects to give a dynamic and sophisticated experience to the site visitors.
+The Speakeasy Landing Page or Homepage is designed as a single page website to provide site visitors with enough information so they can understand what the business is about of this site. This page has minimal amount of information to let the site visitors take next actions. The page is composed of a `Navbar`, a `Hero Image` wiht a 'Shop Now' call to action, an about section and a footer. I used the animate class to add some custom animation to the appearance of text in the hero image and about section.
 
 ### Navbar
-Navbar is fixed at the top of pages across the site, so that the site visitors easily navigate the whole site.  Navbar contains  `Brand Logo`, `Search Box`, `Site Menu`, `My Account dropdown` and `Cart icon`.
-- Search box: This search box function allows the visitors to search the products on online shop with keywords. The keywords are searched over `name` and `descriotion` field of Product Model, `name` field of Color Model and `name` field of Flower Model.(Details of these models will be described at the [Information Architecture](#information-architecture)) This function uses "OR" condition not "AND" when searching the keywords, meaning, if the search query was "Tulip Rose", the search result shows the product found using the keyword "Tulip" OR "Rose". Searching with "OR" condition is chosen in order not to limit the possibilities for the products the potential customers want to purchase.
-- Site Menu & My Account dropdown: The site menu collapses to toggle icon less than 992px width. My Account dropdown is included to toggle menu for smaller screen.
-- Cart icon: The number next to the cart icon shows the total of items added to the cart.
+The Navbar is fixed at the top of all pages across the site, so that the site visitors can easily navigate the whole site.  The Navbar contains the `Brand Name`, `Search Box`, `Wishlist`, `My Account Dropdown` and `Shopping Bag Icon`.
+- Search box: This search box function allows the visitors to search the products on online shop with keywords. The keywords are searched over `name` and `description` field of Product Model, as well as the 'name' field of the Categories Model. (Details of these models will be described at the [Information Architecture](#information-architecture)) 
+- Wishlist: Users can access their wishlist from  
+- My Account Dropdown: The My Account Dropdown allows users to login, access their profile page and log out. Site owners can access the product management page to add products form here also.
+- Bag Icon: The Bag Icon allows users to access their shopping bag when clicked. 
 
 
 Navbar for larger screensizes (width > 992px)
@@ -168,20 +167,90 @@ Navbar for authenticated users
 
 <div align="center"><img src = "" width=700></div>
 
-### About Us & Why Choose Us?
+### About Us Section
 `About Us` section explains what the business is and the brief introduction on how to shop on the site.
 <div align="center"><img src = "" width=700></div>
 
-`Why Choose Us?` section showcases three sales points of the shop with icons representing each one.
-
-<div align="center"><img src = "" width=700></div>
 
 
-### Contact Form
-A simple contact form is placed at the end of the landing page. The email address field is prefilled if the users are logged into their account. Site visitors will fill out fields `name`, `email`, `subject` and `message` when they submit the form. An email with the inquiry from the form will be sent to the admin of the website (handling by django send_mail() functionality).
-<div align="center"><img src = "" width=700></div>
 
 ### Footer
-The footer section consists of two sections: 1. General information of the Shop and Quick Link, 2. Social Media icons.
-1. General Info and Quick Links: The first footer section includes the shop address and its opening hours and quick links to the pages within the site.
+The footer section consists of two sections: 1. General information about Speakeasy Cocktails and 2. Social Media icons.
+1. General Info: The first footer section includes the physical address of Speakeasy Cocktails and along with a phone number and link to 'Contact Us'.
+
+2. Social Media Icons: The Social Media icons are linked to the homepages of their respective social media sites, but in a real settting they should be linked to the businesses pages on social media.
+<div align="center"><img src = "#" width=700></div>
+
+<div><a href="#table-of-contents">Back to top</a></div>
+
+## Product Page
+### Online Shop Page
+By clicking 'Shop Now' on the homepage, users are directed to the online shop or 'Products' page. This page is filtered with  by pricr rating or category using the links in the 'main navbar'. 
+- Sort Filter: On the right hand side of the page or in the centre on mobile view. This allows users to filter products by price, name, category or rating if applicable.
+<div align="center"><img src = "#" width=250></div>
+
+- Result Number: It's shown above the product cards. Customers can see how many results were found in total at a glance.
+<div align="center"><img src = "https://github.com/AsunaMasuda/FloweryDays/blob/master/readme_materials/result_number.png" width=350></div>
+
+- Product Card: The products are displayed in cards that have `Product Name`, `Price` and 'Category' displayed below their respective images. By clicking on the product image, users are directed to the Product Details Page. If the user is logged in as a superuser, an option to Edit or Delete the item is also shown below the image on each card.
+
+Product Card 
+<div align="center"><img src = "https://github.com/AsunaMasuda/FloweryDays/blob/master/readme_materials/bouquet_product_card.png" width=500></div>
+
+
+### Product Detail Page
+
+- Product Image: On the left side of the Product Details page (product_detail.html), the product images are shown. When there are several images for the product, for example, some products have color options such as Carnation, the options will be shown under the main image.
+- Product Information: On the right side of the product detail page, there is a `Product Name`, `Price`, `Description`, `Color` option, `Quantity`, `Add to Cart` button. `Color` option is only visible when the product has the options. Also for superuser, Edit / Delete option will be shown.
+- Product Review Section: Customers can see the product scores and review messages by other customers. The users can leave a score from 1 to 5, and the average of the scores of the customer reviews is shown on the product page. To leave a product review, the user is asked to log in to their account. Also, to delete a review, the customer who left the review needs to log in and the delete option will be visible next to the review after logging in. At the moment, regardless of whether they have purchase history or not, the user is able to leave a review. This is one of the features left to implement to limit it so only the user who actually purchased the product will be allowed to review.
+
+<div align="center"><img src = "#" width=700></div>
+
+
+## Shopping Bag Page
+- The left side of this cart page shows the products added to the cart. Customers are able to change the quantity or remove the products in this cart page.
+- On the right side of this cart page, there is an Order Summary section that shows `Cart Total`, `Delivery` and `Grand Total`. This way, customers are able to check the order summary at first glance even if they have added a lot of products to the shopping cart.
+
+<div align="center"><img src = "https://github.com/AsunaMasuda/FloweryDays/blob/master/readme_materials/shopping_cart.png" width=700></div>
+
+## Checkout Page
+### Checkout Page
+- On the checkout page, customers are asked to fill in delivery details. The customer can also select if they want gift wrapping for the product or not. At the moment, this shop does not collect user's billing information within the User Profile model or Order model.(However, the billing data is recorded in Stripe from the billing information added by the customer.) One of the features left to implement is to add the billing details on the Checkout page.
+- Though the customer can complete the checkout process without having an account, if the customer hasn't logged in, the message "Create an account or login to save this information" is shown at the checkout page.
+
+### Checkout Success Page
+- A thank you message will be displayed after the checkout process as well as the table that holds the order details.
+- `Keep Shopping` button is placed at the end of the page, and if the customer has been logged into their account, `Back to Profile` will be shown.
+
+<div><a href="#table-of-contents">Back to top</a></div>
+
+## Wishlist Page
+### Blog Feed Page
+- After clicking `Blog` on the site menu at the top, Blog Feed page is loaded. On this page, blog posts will be displayed in descending order by the posted date. To display the blog posts beautifully, the layout that shows posts in 2-1-2 order was chosen. `Pagination Bar` is also added at the end of the page.
+- On the left side of this page, I created categories of blog posts so the site visitors can navigate the blog posts easily. The number of posted blogs in the categories is also shown in brackets.
+
+
+<div align="center"><img src = "https://github.com/AsunaMasuda/FloweryDays/blob/master/readme_materials/blog_article.png" width=700></div>
+
+
+## Profiles Page
+`My Profile` page is available for authenticated users and will be shown in the `My Account` Dropdown menu at the navbar which appears when you log into your account.
+### My Profile Page
+- In Profile Page, authenticated users can 1. edit `Delivery Information` and 2. see `Order History`.
+
+## Admin Product Managment
+Only authenticated superusers can access the admin page (1.products/add/, 2. products/edit/, 3. products/delete/, 4. 5. 6. ). If non-logged in users try to access the url directly, it will redirect to the sign in page. If a non-superuser tries to access the url, an error message pops up which says that only a superuser can access this page.
+
+## Contact Page
+
+A simple contact form is placed at the end of the landing page. The email address field is prefilled if the users are logged into their account. Site visitors will fill out fields `name`, `email`, `subject` and `message` when they submit the form. An email with the inquiry from the form will be sent to the admin of the website (handling by django send_mail() functionality).
 <div align="center"><img src = "" width=700></div>
+## Django-allauth features
+Base template for allauth has `Back to Home` button at the end of the page, for easy navigation for users.
+- Sign Up: The users will be asked to fill out `E-mail`, `User Name` and `Password` to create an account. When the sign up form is submitted, a verification email will be sent to the user's email address to complete the sign up process.
+- Log In: Users will be asked to input `User Name` or `Email`, and `Password` to login. If the user successfully logged in, a success message will pop up and redirect to the landing page.
+- Log out: Log out page is accessible from the site menu. After the user successfully signed out button on the sign out page, a success message will appear and redirect to the landing page.
+- Forgot password: Forgot password page is accessible from Sign In page. Users will be asked to put in an email address which they have used for their registration to the site. An email with a link to reset the password will be sent after submitting the form.
+
+<div><a href="#table-of-contents">Back to top</a></div>
+
