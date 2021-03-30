@@ -88,7 +88,7 @@ Speakeasy Cocktail's primary target market is cocktail enthusiasts. We hope to e
 
 <br/>
 
-- Online shopping
+- Products annd Online shopping
 
 | AS A    | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
@@ -233,29 +233,24 @@ Base template for allauth has `Back to Home` button at the end of the page, for 
 
 
 ## Future Features
-### Sort By Ratings
-Boardgame Empire allows customers to review and rate boardgames. However, there are not enough ratings at this point in time for the ability to sort by rating to be particularly useful. It is planned to enable this functionality in the future, adding another sort option to a fairly extensive list that currently includes: by min or max number of players, by playtime, by age suitability, by price, and alphabetically.  
 
-### Rate Reviews
-As reviews are user-generated, they may differ drastically in terms of how helpful they are to others. There is currently no functionality to highlight reviews that a customer found helpful, and this is something that we aim to implement in the future. 
+### Ratings on Products Page
+I would like to add each product's star rating to the product card on the products page however this would be outside the scope of this project.
 
 ### Multiple Wishlists
-For the most part, one wishlist should be sufficient for users. However, there may be cases in which customers would like to organise products into various wishlists. For example, if a customer would like a wishlist for present ideas or unique wishlists for different playgroups, we would like to provide them with this ability.
-
-### 404 Page
-We would like to create a fun and interactive 404 page, in case customers get lost, stumble upon a link that no longer exists, or go hunting in search of easter eggs. This would also help them find their way back to the homepage.
+For the most part, one wishlist should be sufficient for users. However, there may be cases in which customers would like to organise products into various wishlists. For example, if a customer would like a wishlist for presgiftent ideas or unique wishlists for different occasions, I would like to provide them with this ability.
 
 ### Customer Service Chatbot
-Customers are invited to email if they have any queries or issues with their orders. In instances where customers have queries that could be dealt with quickly and in real-time, we would like to investigate the practicality of a chatbot. This, we believe, could improve the user experience and save them time as they would not have to partake in a back-and-forth email chain. 
+Customers are invited to email if they have any queries or issues with their orders. In instances where customers have queries that could be dealt with quickly and in real-time, I would like to investigate the practicality of a chatbot. This could improve the user experience and save them time as they would not have to partake in a back-and-forth email chain. 
 
 ## Information Architecture
 ### Database Choice
 While this project was in development, it utilised the SQLite3 database, but once deployed to Heroku, a PostgresSQL database was used.
 
 ### Schema Design
-Looking at the requirements of the project and the site that was planned, it was determined that five main models were required along with six subsidiary models. 
+Looking at the requirements of the project and the site that was planned, it was determined that five main models were required. 
 
-The main models are: Products, Profiles, Reviews, Orders, and Wishlists. Models that act to support and work in tandem with these included OrderLineItem, Mechanics (and MechanicOfProduct to act as a model to connect Products to Mechanics), Categories (and CategoryToProduct to act as a model to connect Products to Categories/Themes), and WishlistLineItem. 
+The main models are: Products, Profiles, Reviews, Orders, and Wishlists. Models that act to support and work in tandem with these included OrderLineItem, Categories, and WishlistLineItem. 
 
 ![Database Schema]()
 
@@ -293,10 +288,12 @@ JavaScript was used to further enhance the user's experience. For example, it is
 
 Python was used to handle data procured from the database.
 
-### Frameworks
-Django was used to develop the project, taking advantage of certain in-built elements such as authentication as well as its templating language, display variables and data handling.
+### Frameworks and Libraries
+[Django](https://www.djangoproject.com/) was used to develop the project, taking advantage of certain in-built elements such as authentication as well as its templating language, display variables and data handling.
 
-Bootstrap was used to create interactive and visual elements such as the dropdown elements, and the site's general responsive design.
+[Bootstrap](https://getbootstrap.com/) was used to create interactive and visual elements such as the dropdown elements, and the site's general responsive design.
+
+[Animate](https://animate.style/) was used for some styling elements on the homepage, index.html
 
 ### Tools
 [PIP](https://pip.pypa.io/en/stable/) was used to install and manage software packages.
@@ -321,13 +318,7 @@ Bootstrap was used to create interactive and visual elements such as the dropdow
 
 [Font Awesome](https://fontawesome.com/) was used to find icons for use in buttons across the site.
 
-[TinyPNG](https://tinypng.com/) was used to compress and optimise image files.
-
-[HTML Formatter](https://www.freeformatter.com/html-formatter.html) was used to format HTML files and ensure consistency in spacing.
-
-[FreeFormatter CSS Beautifier](https://www.freeformatter.com/css-beautifier.html) was used to format the CSS stylesheet.
-
-[FreeFormatter JS Beautifier](https://www.freeformatter.com/javascript-beautifier.html) was used to format js files from across the project.
+[Code Beautify](https://codebeautify.org/) was used to format HTML files and ensure consistency in spacing.
 
 ## Testing
 The testing process, issues encountered, and any known issues can be found in the [testing.md]() file.
