@@ -380,11 +380,6 @@ input[name='q']::placeholder {
 
 /* -------------/* Footer */------------------ */
 
-footer {
-    flex: 0;
-}
-
-
 .footer-item {
   padding-top: 50px;
   overflow: hidden;
@@ -475,4 +470,8 @@ padding-left: 10px;
 
 .contact-container {
     padding-bottom: 20px;
+    max-width: 600px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }

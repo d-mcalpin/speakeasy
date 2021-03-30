@@ -88,7 +88,7 @@ def product_detail(request, product_id):
     else:
         product_review_form = ProductReviewForm()
 
-    product_reviews = ProductReview.objects.filter(product_id_id=product_id)
+    product_reviews = ProductReview.objects.filter(product_id=product_id)
 
     if product_reviews:
         average_score = round(product_reviews.all().aggregate(

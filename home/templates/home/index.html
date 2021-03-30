@@ -2,46 +2,52 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
+    
+<div class="container header-container">
+	<div class="row">
+		<div class="col"></div>
+	</div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font main-text logo-text animate__animated animate__fadeInLeft animate__delay-1s">
+    
+<div class="container h-100">
+	<div class="row h-100">
+		<div class="col-7 col-md-6 my-auto">
+			<h1 class="display-4 logo-font main-text logo-text animate__animated animate__fadeInLeft animate__delay-1s">
                     Premium Cocktails Delivered To You
                 </h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-                    </h4>
-                </div>
-            </div>
-        </div>
-    </div>
-    <section class="bg-about bg-white about-us" id="about">
-    <div class="container animate__animated animate__fadeIn animate__delay-1s">
-        <div class="row ">
-            <div class="offset-1 col-10 text-center">
-                <h1>About Us</h1>
-                <p>
-                    Speakeasy Cocktails is a home delivery service for premium cocktails and personal bar equipment. <br />
-                    <br />
+			<div class="my-5">
+				<h4>
+					<a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+				</h4>
+			</div>
+		</div>
+	</div>
+</div>
+<section class="bg-about bg-white about-us" id="about">
+	<div class="container animate__animated animate__fadeIn animate__delay-1s">
+		<div class="row ">
+			<div class="offset-1 col-10 text-center">
+				<h1>About Us</h1>
+				<p>
+                    Speakeasy Cocktails is a home delivery service for premium cocktails and personal bar equipment. 
+					<br />
+					<br />
                     We provide a wide range of alcoholic and non alcoholic beverages, pre-prepared and ready to drink, all you need to do is add ice to your favourite glass and enjoy.
-                    <br />
-                    <br />
+                    
+					<br />
+					<br />
                     We deliver nationwide in Ireland. Delivery is free for all orders over €30 and charged at 10% of your order below €30.
-                    <br />
-                    <br />
+                    
+					<br />
+					<br />
                     Please feel free to contact us on the form below if you have any questions as we would be delighted to hear from you.
-                </p>
-            </div>
-        </div>
-    </div>
+                
+				</p>
+			</div>
+		</div>
+	</div>
 </section>
 {% endblock %}

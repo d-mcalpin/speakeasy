@@ -111,29 +111,9 @@ Speakeasy Cocktail's primary target market is cocktail enthusiasts. We hope to e
 
 <br/>
 
-<div><a href="#table-of-contents">Back to top</a></div>
+<div><a href="#table-of-contents">Back to top</a></div
 
-## Design
-### Wireframes
-Wireframes were created with [balsamiq](https://balsamiq.com/) and [moqups](https://moqups.com/).
-You can find the wireframes [here](#).
-
-### Brand Identity
-- Vision: Excellent cocktails delivered to users through a visually appealing online store
-- Mission: Provide a wide range of cocktails for guests to enjoy which can be purchased with a couple of clicks online. Be a supplier of cocktail equipment so guests can enjoy the art of cocktail making at home, without the hassle of going to a physical shops.
-
-### Color Scheme
-Color scheme is important as this is one of the first things site visitors notice when visiting the site. I chose white / black for the site's primary colors because these colors match the secondary earthy colors and make the website look professional and high-end. In addition to that, for the secondary colors of the site, I wanted to create a natural / delicate atmosphere to represent the calming sensation of flowers. For the secondary colors, I used [Coolors.co](https://coolors.co/) to create a color pallet, which you can find below.
-
-<p align="center"><img src = "#"></p>
-
-### Typography
-
-- Icon: [FontAwesome](https://fontawesome.com/) is used for the main icon library accross the site.
-- Favicon: I got the favicon by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](https://www.flaticon.com/).
-
-
-# Features
+## Features
 
 ## Existing Features
 This website is composed of 7 applications: `home`, `bag`, `checkout`, `products`, `profiles`, 'contact' and 'wishlists'
@@ -188,10 +168,10 @@ By clicking 'Shop Now' on the homepage, users are directed to the online shop or
 - Product Card: The products are displayed in cards that have `Product Name`, `Price` and 'Category' displayed below their respective images. By clicking on the product image, users are directed to the Product Details Page. If the user is logged in as a superuser, an option to Edit or Delete the item is also shown below the image on each card.
 
 Product Card 
-<div align="center"><img src = "https://github.com/AsunaMasuda/FloweryDays/blob/master/readme_materials/bouquet_product_card.png" width=500></div>
+<div align="center"><img src = "" width=500></div>
 
 
-### Product Detail Page
+## Product Detail Page including Reviews
 
 - Product Image: The product image is shown on the left side of the Product Details page (product_detail.html).
 - Product Information: On the right side of the product detail page, there is a `Product Name`, `Price`, `Description`, `Quantity` and `Add to Cart` button. Also for superusers, Edit / Delete option will be shown.
@@ -228,23 +208,126 @@ Product Card
 
 
 ## Profiles Page
-`My Profile` page is available for authenticated users and will be shown in the `My Account` Dropdown menu at the navbar which appears when you log into your account.
+The`My Profile` page is available for authenticated or logged in users and will be shown under the `My Account` Dropdown menu non the navbar.
+
 ### My Profile Page
-- In Profile Page, authenticated users can 1. edit `Delivery Information` and 2. see `Order History`.
+- On the Profile Page, authenticated users can 1. Edit `Delivery Information` and 2. View their `Order History`.
 
 ## Admin Product Managment
-Only authenticated superusers can access the admin page (1.products/add/, 2. products/edit/, 3. products/delete/, 4. 5. 6. ). If non-logged in users try to access the url directly, it will redirect to the sign in page. If a non-superuser tries to access the url, an error message pops up which says that only a superuser can access this page.
+The Product Management link allows authenticated superusers can access the `Add Product` page. Here an administrator of the site can add new products to the site. When logged in as an admin or superuser, the user can also edit or delete products from the Products or Product Details Pages. If non-logged in users try to access the url directly, it will redirect to the sign in page. If a non-superuser tries to access the url, an error message pops up which says that only a superuser can access this page.
 
 ## Contact Page
 
-A simple contact form is placed at the end of the landing page. The email address field is prefilled if the users are logged into their account. Site visitors will fill out fields `name`, `email`, `subject` and `message` when they submit the form. An email with the inquiry from the form will be sent to the admin of the website (handling by django send_mail() functionality).
+A simple contact form is accessible by a link in the product navigation bar or by clicking `Contact Us` in the footer. Site visitors will fill out fields `name`, `email`, `subject` and `message` when they submit the form. An email with the inquiry from the form will be sent to the admin of the website (handling by django send_mail() functionality).
+
 <div align="center"><img src = "" width=700></div>
+
 ## Django-allauth features
 Base template for allauth has `Back to Home` button at the end of the page, for easy navigation for users.
 - Sign Up: The users will be asked to fill out `E-mail`, `User Name` and `Password` to create an account. When the sign up form is submitted, a verification email will be sent to the user's email address to complete the sign up process.
 - Log In: Users will be asked to input `User Name` or `Email`, and `Password` to login. If the user successfully logged in, a success message will pop up and redirect to the landing page.
-- Log out: Log out page is accessible from the site menu. After the user successfully signed out button on the sign out page, a success message will appear and redirect to the landing page.
+- Log out: The Log Out Page is accessible from the site menu. After the user successfully signs out by clicking the button on the sign out page, a success message will appear and redirect to the home or landing page.
 - Forgot password: Forgot password page is accessible from Sign In page. Users will be asked to put in an email address which they have used for their registration to the site. An email with a link to reset the password will be sent after submitting the form.
 
 <div><a href="#table-of-contents">Back to top</a></div>
 
+
+## Future Features
+### Sort By Ratings
+Boardgame Empire allows customers to review and rate boardgames. However, there are not enough ratings at this point in time for the ability to sort by rating to be particularly useful. It is planned to enable this functionality in the future, adding another sort option to a fairly extensive list that currently includes: by min or max number of players, by playtime, by age suitability, by price, and alphabetically.  
+
+### Rate Reviews
+As reviews are user-generated, they may differ drastically in terms of how helpful they are to others. There is currently no functionality to highlight reviews that a customer found helpful, and this is something that we aim to implement in the future. 
+
+### Multiple Wishlists
+For the most part, one wishlist should be sufficient for users. However, there may be cases in which customers would like to organise products into various wishlists. For example, if a customer would like a wishlist for present ideas or unique wishlists for different playgroups, we would like to provide them with this ability.
+
+### 404 Page
+We would like to create a fun and interactive 404 page, in case customers get lost, stumble upon a link that no longer exists, or go hunting in search of easter eggs. This would also help them find their way back to the homepage.
+
+### Customer Service Chatbot
+Customers are invited to email if they have any queries or issues with their orders. In instances where customers have queries that could be dealt with quickly and in real-time, we would like to investigate the practicality of a chatbot. This, we believe, could improve the user experience and save them time as they would not have to partake in a back-and-forth email chain. 
+
+## Information Architecture
+### Database Choice
+While this project was in development, it utilised the SQLite3 database, but once deployed to Heroku, a PostgresSQL database was used.
+
+### Schema Design
+Looking at the requirements of the project and the site that was planned, it was determined that five main models were required along with six subsidiary models. 
+
+The main models are: Products, Profiles, Reviews, Orders, and Wishlists. Models that act to support and work in tandem with these included OrderLineItem, Mechanics (and MechanicOfProduct to act as a model to connect Products to Mechanics), Categories (and CategoryToProduct to act as a model to connect Products to Categories/Themes), and WishlistLineItem. 
+
+![Database Schema]()
+
+# Skeleton
+### Mobile Wireframes
+
+## Surface
+### Fonts
+The Google Font, Lato is used across the site as the most prominent font. It was chosen as it is very legible, even in paragraphs with text, and it works well across web and mobile devices.
+
+### Wireframes
+Wireframes were created with [balsamiq](https://balsamiq.com/) and [moqups](https://moqups.com/).
+You can find the wireframes [here](#).
+
+### Brand Identity
+- Vision: Excellent cocktails delivered to users through a visually appealing online store
+- Mission: Provide a wide range of cocktails for guests to enjoy which can be purchased with a couple of clicks online. Be a supplier of cocktail equipment so guests can enjoy the art of cocktail making at home, without the hassle of going to a physical shops.
+
+### Colour Scheme
+The colorr scheme is important as this is one of the first things site visitors notice when visiting the site. I chose a blue, teal, white and black scheme for the site's primary colors because they make the website look professional and high-end. I used [Coolors.co](https://coolors.co/) to create a colour pallet, which you can find below.
+
+<p align="center"><img src = ""></p>
+
+### Typography
+
+- Icon: [FontAwesome](https://fontawesome.com/) is used for the main icon library accross the site.
+- Favicon: I got the Martini favicon from the site [Freepik](https://www.flaticon.com/authors/freepik) and [www.flaticon.com](https://www.flaticon.com/).
+
+
+## Technologies Used
+### Languages 
+HTML & CSS were used for the basic site structure and styling 
+
+JavaScript was used to further enhance the user's experience. For example, it is used to update the customer's grand total in real time if they use loyalty points to discount their purchase, to display a spinner if a page is taking a while to load, and to return the user to the top of the page when scrolling.
+
+Python was used to handle data procured from the database.
+
+### Frameworks
+Django was used to develop the project, taking advantage of certain in-built elements such as authentication as well as its templating language, display variables and data handling.
+
+Bootstrap was used to create interactive and visual elements such as the dropdown elements, and the site's general responsive design.
+
+### Tools
+[PIP](https://pip.pypa.io/en/stable/) was used to install and manage software packages.
+
+[Git](https://git-scm.com/) was used to track changes in code during development.
+
+[GitHub](https://github.com/) was used to host the project’s repository.
+
+[Heroku](https://heroku.com/) was used to ultimately deploy the live website.
+
+[Stripe](http://stripe.com/) was used to accept payments via the checkout app.
+
+[Amazon Web Services](https://aws.amazon.com/) was used to host images and static files for the deployed website. 
+
+[DB Designer](https://www.dbdesigner.net/) was used to design the schema that this site would utilise for its database.
+
+[Balsamiq](https://balsamiq.com/) was used to create the wireframes that the site's layout is based upon.
+
+[Coolors](https://coolors.co/) was used to help find a suitable palette for the site and to check if colours might work together.
+
+[Google Fonts](https://fonts.google.com/) was used to find the fonts that would be suitable as headings and general text content.
+
+[Font Awesome](https://fontawesome.com/) was used to find icons for use in buttons across the site.
+
+[TinyPNG](https://tinypng.com/) was used to compress and optimise image files.
+
+[HTML Formatter](https://www.freeformatter.com/html-formatter.html) was used to format HTML files and ensure consistency in spacing.
+
+[FreeFormatter CSS Beautifier](https://www.freeformatter.com/css-beautifier.html) was used to format the CSS stylesheet.
+
+[FreeFormatter JS Beautifier](https://www.freeformatter.com/javascript-beautifier.html) was used to format js files from across the project.
+
+## Testing
+The testing process, issues encountered, and any known issues can be found in the [testing.md]() file.

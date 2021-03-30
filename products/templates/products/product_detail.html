@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block page_header %}
+
 <div class="container header-container">
     <div class="row">
         <div class="col"></div>
@@ -10,80 +11,109 @@
 {% endblock %}
 
 {% block content %}
+
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
                 {% if product.image %}
+
                 <a href="{{ product.image.url }}" target="_blank">
                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                 </a>
                 {% else %}
+
                 <a href="">
                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                 </a>
                 {% endif %}
+
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <div class="product-details-container mb-5 mt-md-5">
                 <p class="mb-0">{{ product.name }}</p>
                 {% if user.is_authenticated %}
+
                 <!--Check if product is on user wishlist and alter button functionality-->
                 <div class="input-field center-align">
                     {% if on_wishlist %}
+
                     <form class="form" method="POST" action="{% url 'remove_from_wishlist' product.id %}">
                         {% csrf_token %}
+
                         <button class="btn btn-outline-black rounded-0 mt-5 qty-submit block" id="remove-wishlist-btn"
                             type="submit" name="action">
                             <i class="fas fa-heart"></i> Remove from Wishlist
+
                         </button>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </form>
                     {% else %}
+
                     <form class="form" method="POST" action="{% url 'add_to_wishlist' product.id %}">
                         {% csrf_token %}
+
                         <button class="btn btn-outline-black rounded-0 mt-5 qty-submit block" id="add-wishlist-btn"
                             type="submit" name="action">
                             <i class="far fa-heart"></i> Add to Wishlist
+
                         </button>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </form>
                     {% endif %}
+
                 </div>
                 {% else %}
-                <p class="small"><a href="{% url 'account_login' %}">Login</a> or <a
-                        href="{% url 'account_signup' %}">register</a> to add {{ product.name }} to your wishlist</p>
+
+                <p class="small">
+                    <a href="{% url 'account_login' %}">Login</a> or
+                    <a href="{% url 'account_signup' %}">register</a> to add {{ product.name }} to your wishlist
+                </p>
                 {% endif %}
+
 
                 <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
                 {% if product.category %}
+
                 <p class="small mt-1 mb-0">
                     <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
                         <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+
                     </a>
                 </p>
                 {% endif %}
                 {% if product.rating %}
-                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+
+                <small class="text-muted">
+                    <i class="fas fa-star mr-1"></i>{{ product.rating }} / 5
+                </small>
                 {% else %}
+
                 <small class="text-muted">No Rating</small>
                 {% endif %}
                 {% if request.user.is_superuser %}
+
                 <small class="ml-3">
                     <a href="{% url 'edit_product' product.id %}">Edit</a> |
+
                     <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                 </small>
                 {% endif %}
+
                 <p class="mt-3">{{ product.description }}</p>
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
+
                     <div class="form-row">
                         {% with product.has_sizes as s %}
                         {% if s %}
+
                         <div class="col-12">
-                            <p><strong>Size:</strong></p>
+                            <p>
+                                <strong>Size:</strong>
+                            </p>
                             <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
                                 <option value="xs">XS</option>
                                 <option value="s">S</option>
@@ -93,8 +123,11 @@
                             </select>
                         </div>
                         {% endif %}
+
                         <div class="col-12">
-                            <p class="mt-3"><strong>Quantity:</strong></p>
+                            <p class="mt-3">
+                                <strong>Quantity:</strong>
+                            </p>
                             <div class="form-group w-50">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
@@ -118,7 +151,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="col{% if s %}-12 mt-2{% endif %}">
                             <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                 <span class="icon">
@@ -130,11 +162,13 @@
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         {% endwith %}
+
                     </div>
                 </form>
                 <div class="mb-3 mt-3">
                     <div class="ml-3 mt-2 mb-2">
                         <span>Customer Average Score:
+
                             <span class="store-text-large">{{ average_score }} / 5.0</span>
                         </span>
                         <span class="stars-outer">
@@ -148,7 +182,9 @@
                                 <div class="collapsed review_click_arrow_1" data-toggle="collapse"
                                     data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
                                     role="button">
-                                    <h6 class="mb-0">View Reviews <i class="fas fa-chevron-down"></i></h6>
+                                    <h6 class="mb-0">View Reviews
+                                        <i class="fas fa-chevron-down"></i>
+                                    </h6>
                                 </div>
                             </div>
                             <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
@@ -156,6 +192,7 @@
                                 <div class="card-body">
                                     {% if product_reviews %}
                                     {% for review in product_reviews %}
+
                                     <div>
                                         <span>{{ review.review_title }} </span>
                                         <span class="stars-outer">
@@ -168,10 +205,12 @@
                                     <div>
                                         {% if request.user.is_authenticated %}
                                         {% if user.name == review.user_id %}
+
                                         <a href="{% url 'delete_review' review.pk %}" class="product_delete">Delete
                                             Review</a>
                                         {% endif %}
                                         {% endif %}
+
                                     </div>
                                     <div>
                                         {{ review.review_comment }}
@@ -179,20 +218,25 @@
                                     <hr>
                                     {% endfor %}
                                     {% else %}
+
                                     <div>
                                         <p>No Customer Reviews</p>
                                     </div>
                                     {% endif %}
+
                                 </div>
                             </div>
                         </div>
                         {% if user.is_authenticated %}
+
                         <div class="card card-review-extension">
                             <div class="card-header card-header-review-extension" id="headingTwo">
                                 <div class="collapsed review_click_arrow_2" data-toggle="collapse"
                                     data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
                                     role="button">
-                                    <h6 class="mb-0">Leave A Review <i class="fas fa-chevron-down"></i></h6>
+                                    <h6 class="mb-0">Leave A Review
+                                        <i class="fas fa-chevron-down"></i>
+                                    </h6>
                                 </div>
                             </div>
                             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
@@ -201,6 +245,7 @@
                                     <form class="form" action="{% url 'product_detail' product.pk %}" method="POST">
                                         {% csrf_token %}
                                         {{ product_review_form|crispy }}
+
                                         <button class="btn btn-black" action="submit"
                                             aria-label="Product Review Submit Button">Submit Review</button>
                                     </form>
@@ -208,12 +253,15 @@
                             </div>
                         </div>
                         {% else %}
+
                         <div class="mt-4">
                             <p>To leave a review, please
+
                                 <a href="{% url 'account_login' %}">log in.</a>
                             </p>
                         </div>
                         {% endif %}
+
                     </div>
                 </div>
             </div>
