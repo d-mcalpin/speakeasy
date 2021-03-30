@@ -25,4 +25,3 @@ class ProductReviewForm(forms.ModelForm):
     class Meta:
         model = ProductReview
         fields = ('rating_score', 'review_title', 'review_comment')
-

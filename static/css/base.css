@@ -430,6 +430,8 @@ padding-left: 10px;
   background-color: rgba(87, 202, 255, 1);
 }
 
+/* Changes to Margins and Padding */
+
 .content {
   min-height: calc(100vh - 70px);
 }
