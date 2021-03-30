@@ -132,11 +132,6 @@ Color scheme is important as this is one of the first things site visitors notic
 - Icon: [FontAwesome](https://fontawesome.com/) is used for the main icon library accross the site.
 - Favicon: I got the favicon by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](https://www.flaticon.com/).
 
-### Brand Logo
-Logo design is the cornerstone in your brand identity and presents a company's name, product and brand. I used [Canva](https://www.canva.com/en_gb/) to create the brand logo file. The font represents the brand value `elegance` and the image of a branch at the top was added to represent `Nature` brand value.
-<p align="center"><img src = ""></p>
-
-<div "text-align: right;"><a href="#table-of-contents">Back to top</a></div>
 
 # Features
 
@@ -188,7 +183,7 @@ By clicking 'Shop Now' on the homepage, users are directed to the online shop or
 <div align="center"><img src = "#" width=250></div>
 
 - Result Number: It's shown above the product cards. Customers can see how many results were found in total at a glance.
-<div align="center"><img src = "https://github.com/AsunaMasuda/FloweryDays/blob/master/readme_materials/result_number.png" width=350></div>
+<div align="center"><img src = "" width=350></div>
 
 - Product Card: The products are displayed in cards that have `Product Name`, `Price` and 'Category' displayed below their respective images. By clicking on the product image, users are directed to the Product Details Page. If the user is logged in as a superuser, an option to Edit or Delete the item is also shown below the image on each card.
 
@@ -198,38 +193,38 @@ Product Card
 
 ### Product Detail Page
 
-- Product Image: On the left side of the Product Details page (product_detail.html), the product images are shown. When there are several images for the product, for example, some products have color options such as Carnation, the options will be shown under the main image.
-- Product Information: On the right side of the product detail page, there is a `Product Name`, `Price`, `Description`, `Color` option, `Quantity`, `Add to Cart` button. `Color` option is only visible when the product has the options. Also for superuser, Edit / Delete option will be shown.
-- Prouct Wishlist Section
-- Product Review Section: Customers can see the product scores and review messages by other customers. The users can leave a score from 1 to 5, and the average of the scores of the customer reviews is shown on the product page. To leave a product review, the user is asked to log in to their account. Also, to delete a review, the customer who left the review needs to log in and the delete option will be visible next to the review after logging in. At the moment, regardless of whether they have purchase history or not, the user is able to leave a review. This is one of the features left to implement to limit it so only the user who actually purchased the product will be allowed to review.
+- Product Image: The product image is shown on the left side of the Product Details page (product_detail.html).
+- Product Information: On the right side of the product detail page, there is a `Product Name`, `Price`, `Description`, `Quantity` and `Add to Cart` button. Also for superusers, Edit / Delete option will be shown.
+- Prouct Wishlist: If the user is logged in, they can use the `Add to Wishlist` button to the right of the product image in order to add the pruduct to the users wishlist. If the user is not logged in, they will be asked to register or log in to add the product to their wishlist.
+- Product Review Section: Users can see the product scores and review messages by other customers. The users can leave a score from 1 to 5, and the average of the scores of the customer reviews is shown on the product page. To leave a product review, the user is asked to log in to their account or register for an account. Also, to delete a review, the customer who left the review needs to log in and the delete option will be visible next to the review after logging in. At the moment, regardless of whether they have purchase history or not, the user is able to leave a review. This is one of the features left to implement to limit it so only the user who actually purchased the product will be allowed to review.
 
 <div align="center"><img src = "#" width=700></div>
 
 
 ## Shopping Bag Page
-- The left side of this cart page shows the products added to the cart. Customers are able to change the quantity or remove the products in this cart page.
-- On the right side of this cart page, there is an Order Summary section that shows `Cart Total`, `Delivery` and `Grand Total`. This way, customers are able to check the order summary at first glance even if they have added a lot of products to the shopping cart.
+- The left side of this cart page shows the products added to the bag. Customers are able to change the quantity or remove the products in this bag page.
+- On the right side of this bag page, there is an Order Summary section that shows `Bag Total`, `Delivery` and `Grand Total`. This way, customers are able to check the order summary at first glance even if they have added a lot of products to the shopping bag.
 
-<div align="center"><img src = "https://github.com/AsunaMasuda/FloweryDays/blob/master/readme_materials/shopping_cart.png" width=700></div>
+<div align="center"><img src = "#" width=700></div>
 
 ## Checkout Page
 ### Checkout Page
-- On the checkout page, customers are asked to fill in delivery details. The customer can also select if they want gift wrapping for the product or not. At the moment, this shop does not collect user's billing information within the User Profile model or Order model.(However, the billing data is recorded in Stripe from the billing information added by the customer.) One of the features left to implement is to add the billing details on the Checkout page.
+- On the checkout page, customers are asked to fill in delivery details. The delivery details will be populated automatically from the users profile if they are logged in. The billing data is also recorded in Stripe from the billing information added by the customer using a Webhook).
 - Though the customer can complete the checkout process without having an account, if the customer hasn't logged in, the message "Create an account or login to save this information" is shown at the checkout page.
 
 ### Checkout Success Page
-- A thank you message will be displayed after the checkout process as well as the table that holds the order details.
-- `Keep Shopping` button is placed at the end of the page, and if the customer has been logged into their account, `Back to Profile` will be shown.
+- A thank you message will be displayed after the checkout process as well as the table that holds the order details, users will be imfored via toast message that a confirmation email has been sent to the email address that they provided.
+- A `Keep Shopping` button is placed at the end of the page, and if the customer has been logged into their account, `Back to Profile` will be shown.
 
 <div><a href="#table-of-contents">Back to top</a></div>
 
 ## Wishlist Page
-### Blog Feed Page
-- After clicking `Blog` on the site menu at the top, Blog Feed page is loaded. On this page, blog posts will be displayed in descending order by the posted date. To display the blog posts beautifully, the layout that shows posts in 2-1-2 order was chosen. `Pagination Bar` is also added at the end of the page.
-- On the left side of this page, I created categories of blog posts so the site visitors can navigate the blog posts easily. The number of posted blogs in the categories is also shown in brackets.
+
+- If a user is registered and logged in, they can add products to their wishlist to view later. The wishlist is accessed by a heart icon at the top right of the main nav bar in desktop view and in the dropdown menu in mobile view. 
+- The Wishlist Page mirrors the All Products Page however only items added by the user are displayed. Each Product Card displays the same information as cards on the Products Page and allows users to click in the product's product details page via the product's image
 
 
-<div align="center"><img src = "https://github.com/AsunaMasuda/FloweryDays/blob/master/readme_materials/blog_article.png" width=700></div>
+<div align="center"><img src = "#" width=700></div>
 
 
 ## Profiles Page
