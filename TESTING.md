@@ -235,17 +235,15 @@ I used these validation tools below for each file.
 - Python: [PEP8 online](http://pep8online.com/)
 
 Result:
-- In CSS validation, there are warnings for button elements. I did not address this since the color should be kept for the design purpose and it does not affect any other functions/elements.
-- There is an error `Duplicate ID` when validating in cart view, but it's expected since there are Cart View for Desktop and Mobile devices and these IDs won't be rendered at the same time.
+- HMTL: In the W3C HTML Validator, there is an error Duplicate ID when as the mobile header and main header use the same id. However these will never be used at the same time.
+- CSS: The W3C CSS Validator showed up library errors for Animate and Bootstrap however these relate to external libraries and not the projects CSS.
+- Javascript: JSHint passed without any issues.
+- Python: There are numerous E501: Line Too Long errors in Python files however shortening them inhibits code readability and therefore they have been ignored. Other that these warnings all pages are PEP8 compliant.
 
 ### Formatter
 - HTML: [HTML Formatter](https://codebeautify.org/htmlviewer/) - Set the tab size to 4.
 - CSS: [CSS Formatter](https://webformatter.com/css) - Set the tab size to 4.
-- JavaScript: [Online JavaScript Beautifier](https://beautifier.io/)
 - Python:[PEP8 online](http://pep8online.com/)
 
-Note:
-- I used HTML formatter but there are Django templates in the html files which broke the format. In these cases, I manually formatted the html files referring to html files used in [botique ado project](https://github.com/ckz8780/boutique_ado_v1/tree/9ed36dc2c07228041b56b28174dd96ee56e6c59a).
-
 # Compatibility and Responsiveness
-The device emulator by Google Chrome's developer tool is used to check the responsiveness across all the different screen sizes and devies to ensure compatibility and responsiveness. Also, this website has been tested on multiple browsers (Chrome, Safari, Opera, FireFox) on macOS Mojave (Version 10.14.6).  iPhone XR (iOS 14.1) is used to test for mobile testing.
+The device emulator by Google Chrome's developer tool was used to check the responsiveness across all  different screen sizes and devies to ensure compatibility and responsiveness. Also, this website has been tested on multiple browsers (Chrome, Safari and Edge. An iPhone 11 was used for mobile testing.
