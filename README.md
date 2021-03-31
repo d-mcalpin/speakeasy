@@ -271,7 +271,7 @@ The main models are: Products, Profiles, Reviews, Orders, and Wishlists. Models 
 
 Wireframes were created with [balsamiq](https://balsamiq.com/).
 
-The [Speakeasy Desktop Wireframes are available here]()  and the [Speakeasy Mobile Wireframes are available here]() .
+The [Speakeasy Desktop Wireframes are available here](https://drive.google.com/file/d/1dMScUY5iQfrQNF4l2grG6s0qgkEGP5yw/view?usp=sharing)  and the [Speakeasy Mobile Wireframes are available here](https://drive.google.com/file/d/1nyUIpmPiKz06-oXt08thrQOAQidN4RMB/view?usp=sharing) .
 
 <span id="surface"></span>
 
@@ -337,6 +337,8 @@ Python was used to handle data procured from the database.
 [Font Awesome](https://fontawesome.com/) was used to find icons for use in buttons across the site.
 
 [Code Beautify](https://codebeautify.org/) was used to format HTML files and ensure consistency in spacing.
+
+[Google Drive](www.google.com) was used to store and share the projects Wireframes.
 
 <span id="testing"></span>
 
@@ -562,7 +564,7 @@ The following sources were used for code snippets or inspiration throughout the 
 
 **Images**
 - The homepage image was downloaded from Taryn Elliott's collection of Pexels, available [here](https://www.pexels.com/@taryn-elliott)
-- The product images were sourced from Alexa_Fotos collection on Pixabay: [Available Here](https://pixabay.com/users/alexas_fotos-686414/?tab=about)
+- The product images were sourced from Alexa_Fotos and other collections on Pixabay: [Available Here](https://pixabay.com/users/alexas_fotos-686414/?tab=about)
  
  
 **Fonts and Icons**
