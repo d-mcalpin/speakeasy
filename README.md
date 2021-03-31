@@ -1,30 +1,31 @@
 # Speakeasy Cocktails
 ## Code Institute - Milestone 4 Project
 
-![Ireland Recommends mockups on various devices](https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/speakeasy_mockup.PNG)
+<div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/speakeasy_mockup.PNG" width=700></div>
+
 ### Live Heroku Link:
 
-![Speakeasy Cocktails](https://speakeasy-cocktails.herokuapp.com/)
+[Speakeasy Cocktails](https://speakeasy-cocktails.herokuapp.com/)
 
 # Table of Contents
-* [Summary](#summary)
-* 1. [Aim of the Site](#aim-of-the-site)
-* 2. [Scope](#scope)
-* 3. [User Stories](#user-stories)
-* 4. [Structure](#structure)
-* 5. [Future Features](#future-features)
-* 6. [Information Architecture](#information-architecture)
-* 7. [Skeleton](#skeleton)
-* 8. [Surface](#surface)
-* 9. [Technologies Used](#technologies-used)
-* 10. [Testing](#testing)
-* 11. [Deployment](#deployment)
-* 12. [Credits](#credits)
 
+- <a href="#aim">1. Aim Of The Site </a>
+- <a href="#scope">2. Scope </a>
+- <a href="#users">3. User Stories</a>
+- <a href="#structure">4. Structure </a>
+- <a href="#future">5. Future Features </a>
+- <a href="#info">6. Information Architecture </a>
+- <a href="#skeleton">7. Skeleton </a>
+- <a href="#surface">8. Surface </a>
+- <a href="#tech">9. Technologies Used </a>
+- <a href="#testing">10. Testing </a>
+- <a href="#deployment">11. Deployment </a>
+- <a href="#credits">12. Credits </a>
 
 # Summary
 Speakeasy Cocktails is an online coctail retailer, which specialises in delivering ready to drink cocktails and bar equipment direct to your home.
 
+<span id="aim"></span>
 ## 1. Aim of the Site
 Finding delicious cocktails can sometimes be tricky, particularly if you have to make them yourself.
 
@@ -32,6 +33,7 @@ The aim of the Speakeasy Cocktails website is to make this process finding great
 
 Products are displayed in an easy to use format where customers can search by keyword or find an item by category from anywhere on the site.
 
+<span id="scope"></span>
 ## 2. Scope
 Speakeasy Cocktail's primary target market is cocktail enthusiasts. We hope to encourage frequent purchases by offering customers an easy to use interface and a pleasant experience, while the ability to leave reviews may encourage customers to share knowledge and opinions with other customers. 
 
@@ -56,6 +58,7 @@ Speakeasy Cocktail's primary target market is cocktail enthusiasts. We hope to e
 
 <div><a href="#table-of-contents">Back to top</a></div>
 
+<span id="users"></span>
 ## 3. User Stories
 
 - Viewing and Navigation
@@ -106,7 +109,7 @@ Speakeasy Cocktail's primary target market is cocktail enthusiasts. We hope to e
 
 <div><a href="#table-of-contents">Back to top</a></div
 
-
+<span id="structure"></span>
 ## 4. Structure
 This website is composed of 7 applications: `home`, `bag`, `checkout`, `products`, `profiles`, 'contact' and 'wishlists'
 
@@ -227,7 +230,7 @@ Base template for allauth has `Back to Home` button at the end of the page, for 
 
 <div><a href="#table-of-contents">Back to top</a></div>
 
-
+<span id="future"></span>
 ## 5. Future Features
 
 ### Ratings on Products Page
@@ -239,6 +242,7 @@ For the most part, one wishlist should be sufficient for users. However, there m
 ### Customer Service Chatbot
 Customers are invited to email if they have any queries or issues with their orders. In instances where customers have queries that could be dealt with quickly and in real-time, I would like to investigate the practicality of a chatbot. This could improve the user experience and save them time as they would not have to partake in a back-and-forth email chain. 
 
+<span id="info"></span>
 ## 6. Information Architecture
 
 ### Database Choice
@@ -251,6 +255,8 @@ The main models are: Products, Profiles, Reviews, Orders, and Wishlists. Models 
 
 ![Database Schema](https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/speakeasy_schema.PNG)
 
+<div><a href="#table-of-contents">Back to top</a></div>
+<span id="skeleton"></span>
 ## 7.Skeleton
 
 ###  Wireframes
@@ -259,6 +265,7 @@ Wireframes were created with [balsamiq](https://balsamiq.com/).
 
 The [Speakeasy Desktop Wireframes are available here]()  and the [Speakeasy Mobile Wireframes are available here]() .
 
+<span id="surface"></span>
 ## 8. Surface
 ### Fonts
 The Google Font, Lato is used across the site as the most prominent font. It was chosen as it is very legible, even in paragraphs with text, and it works well across web and mobile devices.
@@ -277,7 +284,8 @@ The colorr scheme is important as this is one of the first things site visitors 
 - Icon: [FontAwesome](https://fontawesome.com/) is used for the main icon library accross the site.
 - Favicon: I got the Martini favicon from the site [Freepik](https://www.flaticon.com/authors/freepik) and [www.flaticon.com](https://www.flaticon.com/).
 
-
+<div><a href="#table-of-contents">Back to top</a></div>
+<span id="tech"></span>
 ## 9. Technologies Used
 
 ### Languages 
@@ -319,9 +327,12 @@ Python was used to handle data procured from the database.
 
 [Code Beautify](https://codebeautify.org/) was used to format HTML files and ensure consistency in spacing.
 
+<span id="testing"></span>
 ## 10. Testing
 The testing process, issues encountered, and any known issues can be found in the [testing.md](https://github.com/d-mcalpin/speakeasy/blob/master/TESTING.md) file.
 
+<div><a href="#table-of-contents">Back to top</a></div>
+<span id="deployment"></span>
 ## 11. Deployment
 ### Local Deployment
 If you would like to explore or further develop this project locally, you can clone it and deploy it locally:
@@ -502,6 +513,8 @@ if 'USE_AWS' in os.environ:
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 ```
+<div><a href="#table-of-contents">Back to top</a></div>
+<span id="credits"></span>
 ## 12. Credits
 
 ### Content
@@ -542,3 +555,4 @@ I do not own any of the text written for the individual reviews. All opinions ar
 This project is for educational purposes only.
 
 ***
+<div><a href="#table-of-contents">Back to top</a></div>
