@@ -1,4 +1,4 @@
-# Testing
+# Testing - Speakeasy Cocktails
 ## Table of Contents
 
 1. [Manual Testing](#manual-testing)
@@ -6,7 +6,7 @@
     - [Landing Page](#landing-page)
     - [Navbar](#navbar)
     - [Footer](#footer)
-    - [Onlineshop](#onlineshop)
+    - [Onlineshop and Products](#onlineshop-and-products)
     - [Reviews](#reviews)
     - [Shopping Bag](#bag)
     - [Checkout and Checkout Success Page](#checkout-and-checkout-success-page)
@@ -15,7 +15,7 @@
     - [Admin Product Management](#admin-product-management) 
     - [Bugs](#bugs)
 
-2. [Code Valication and Formatting](#code-valication-and-formatting )
+2. [Code Validation and Formatting](#code-validation-and-formatting )
     - [Validation Tools](#validation-tools)
     - [Formatter](#formatter)
 
@@ -219,14 +219,16 @@ Passed all tests.
 Passed all tests.
 
 ## Bugs
+- Although the scroll to top button works on the Products Page, it's functionality is inhibited when it reaches the footer of the page. This is a bug that is still to be fixed when time allows.
+- I wanted to add the User Review Star Ratings to the individual product cards on the Products page however the actual rating would not appear for each individual product, this has been removed pending further investigation.
 
 
 ## LightHouse on Google DevTool
 I used Lighthouse by Google on theHome Page, Products Page, Product Details Page, Wishlist Page and Bag Page.
-<br>Result: `Landing Page` - It reported the file size of some images are not appropriate, even after I used service called [tinypng](https://tinypng.com/) to reduce the file size. I'd like to investigate this as feature improvements because of the time constraints.
+<br>Result: 
 
 
-# Code Valication and Formatting 
+# Code Validation and Formatting 
 ### Validation Tools
 I used these validation tools below for each file.
 - HTML: [W3C HTML Validator](https://validator.w3.org/) *For HTML validator, I passed each URI to validator since the html files contain Django templates.
@@ -243,7 +245,7 @@ Result:
 ### Formatter
 - HTML: [HTML Formatter](https://codebeautify.org/htmlviewer/) - Set the tab size to 4.
 - CSS: [CSS Formatter](https://webformatter.com/css) - Set the tab size to 4.
-- Python:[PEP8 online](http://pep8online.com/)
+- Python: [PEP8 online](http://pep8online.com/)
 
 # Compatibility and Responsiveness
 The device emulator by Google Chrome's developer tool was used to check the responsiveness across all  different screen sizes and devies to ensure compatibility and responsiveness. Also, this website has been tested on multiple browsers (Chrome, Safari and Edge. An iPhone 11 was used for mobile testing.

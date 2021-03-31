@@ -1,7 +1,7 @@
 # Speakeasy Cocktails
 ## Code Institute - Milestone 4 Project
 
-<div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/speakeasy_mockup.PNG" width=700></div>
+<div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/speakeasy_mockup.png" width=700></div>
 
 ### Live Heroku Link:
 
@@ -26,7 +26,9 @@
 Speakeasy Cocktails is an online coctail retailer, which specialises in delivering ready to drink cocktails and bar equipment direct to your home.
 
 <span id="aim"></span>
+
 ## 1. Aim of the Site
+
 Finding delicious cocktails can sometimes be tricky, particularly if you have to make them yourself.
 
 The aim of the Speakeasy Cocktails website is to make this process finding great cocktails and enjoying them at home an easy and pleasant experience. On each product page, customers have the opportunity to read reviews about the cocktails and equipment that is for sale as well as the opportunit to add products to a wishlist in case they would like to try them in the future.
@@ -34,7 +36,9 @@ The aim of the Speakeasy Cocktails website is to make this process finding great
 Products are displayed in an easy to use format where customers can search by keyword or find an item by category from anywhere on the site.
 
 <span id="scope"></span>
+
 ## 2. Scope
+
 Speakeasy Cocktail's primary target market is cocktail enthusiasts. We hope to encourage frequent purchases by offering customers an easy to use interface and a pleasant experience, while the ability to leave reviews may encourage customers to share knowledge and opinions with other customers. 
 
 ### Project Goals
@@ -59,6 +63,7 @@ Speakeasy Cocktail's primary target market is cocktail enthusiasts. We hope to e
 <div><a href="#table-of-contents">Back to top</a></div>
 
 <span id="users"></span>
+
 ## 3. User Stories
 
 - Viewing and Navigation
@@ -110,6 +115,7 @@ Speakeasy Cocktail's primary target market is cocktail enthusiasts. We hope to e
 <div><a href="#table-of-contents">Back to top</a></div
 
 <span id="structure"></span>
+
 ## 4. Structure
 This website is composed of 7 applications: `home`, `bag`, `checkout`, `products`, `profiles`, 'contact' and 'wishlists'
 
@@ -165,7 +171,7 @@ By clicking 'Shop Now' on the homepage, users are directed to the online shop or
 <div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/product_card.PNG" width=300></div>
 
 
-## Product Detail Page including Reviews
+### Product Detail Page including Reviews
 
 - Product Image: The product image is shown on the left side of the Product Details page (product_detail.html).
 - Product Information: On the right side of the product detail page, there is a `Product Name`, `Price`, `Description`, `Quantity` and `Add to Cart` button. Also for superusers, Edit / Delete option will be shown.
@@ -231,6 +237,7 @@ Base template for allauth has `Back to Home` button at the end of the page, for 
 <div><a href="#table-of-contents">Back to top</a></div>
 
 <span id="future"></span>
+
 ## 5. Future Features
 
 ### Ratings on Products Page
@@ -257,7 +264,8 @@ The main models are: Products, Profiles, Reviews, Orders, and Wishlists. Models 
 
 <div><a href="#table-of-contents">Back to top</a></div>
 <span id="skeleton"></span>
-## 7.Skeleton
+
+## 7. Skeleton
 
 ###  Wireframes
 
@@ -266,6 +274,7 @@ Wireframes were created with [balsamiq](https://balsamiq.com/).
 The [Speakeasy Desktop Wireframes are available here]()  and the [Speakeasy Mobile Wireframes are available here]() .
 
 <span id="surface"></span>
+
 ## 8. Surface
 ### Fonts
 The Google Font, Lato is used across the site as the most prominent font. It was chosen as it is very legible, even in paragraphs with text, and it works well across web and mobile devices.
@@ -285,7 +294,9 @@ The colorr scheme is important as this is one of the first things site visitors 
 - Favicon: I got the Martini favicon from the site [Freepik](https://www.flaticon.com/authors/freepik) and [www.flaticon.com](https://www.flaticon.com/).
 
 <div><a href="#table-of-contents">Back to top</a></div>
+
 <span id="tech"></span>
+
 ## 9. Technologies Used
 
 ### Languages 
@@ -328,26 +339,38 @@ Python was used to handle data procured from the database.
 [Code Beautify](https://codebeautify.org/) was used to format HTML files and ensure consistency in spacing.
 
 <span id="testing"></span>
+
 ## 10. Testing
+
 The testing process, issues encountered, and any known issues can be found in the [testing.md](https://github.com/d-mcalpin/speakeasy/blob/master/TESTING.md) file.
 
 <div><a href="#table-of-contents">Back to top</a></div>
 <span id="deployment"></span>
+
 ## 11. Deployment
+
 ### Local Deployment
 If you would like to explore or further develop this project locally, you can clone it and deploy it locally:
+
 * Navigate to the [Speakeasy project repository](https://github.com/d-mcalpin/speakeasy)
+
 * Click on the button marked "Code"
+
 * Copy the link provided (https://github.com/d-mcalpin/speakeasy.git)
+
 * As this project uses Python, it is best to operate within a virtual environment. The instructions on setting up and activating a virtual environment may be different, depending on your operating system. The official Python Documentation would be the best place to consult in order to set this up correctly.
+
 * To install the required modules used by this project, use the command "pip -r requirements.txt"
+
 * Add environment variables for:
     * SECRET_KEY
     * STRIPE_PUBLIC_KEY
     * STRIPE_SECRET_KEY
     * STRIPE_WH_SECRET
     * DATABASE_URL
+
 * These variables can be added to Gitpod's settings, if using Gitpod, or to an env.py file. If using an env.py file, make sure it is added to .gitignore to ensure that all secret keys are kept secret.
+
 * To set up the SQLite3 database for the first time, use the following commands in your terminal
 ```
 python3 manage.py makemigrations
@@ -514,19 +537,25 @@ if 'USE_AWS' in os.environ:
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 ```
 <div><a href="#table-of-contents">Back to top</a></div>
+
 <span id="credits"></span>
+
 ## 12. Credits
 
 ### Content
-The design and style of my project was initially inspired by elements of the following project:
-- [adamdelancey's Milestone 3 Project, Tips](https://github.com/adamdelancey/ms3-tips)
+The design and style of my project inlcuding README and TESTING files were initially inspired by elements of the following project:
+- [mark-obeirne's Milestone 4 Project, Boardgame Empire ](https://github.com/mark-obeirne/boardgameempire/)
 
-Some README content and layout was also inspired by the following project:
-- [juanstelling's Milestone 3 Project, Breaktasty](https://github.com/juanstelling/MS3_breaktasty/blob/master/README.md)
+Some project content as well as the README and TESTING files were inspired by the following project:
+- [AsunaMasuda's Milestone 4 Project, FloweryDays](https://github.com/AsunaMasuda/FloweryDays)
 
 The following sources were used for code snippets or inspiration throughout the project:
 
 - Initial instructions for setting up the site were taken from the E-Commerce Site walkthrough from the [Code Institute](https://codeinstitute.net/) Full Stack Developer Course.
+- Advice on centering Bootstrap columns was taken from the following [Stakoverflow Thread](https://stackoverflow.com/questions/23682876/centering-the-row-in-bootstrap-with-a-minimum-width)
+- Direction for keeping the footer at the bottom of the page was taken from this [Stackoverflow Thread] (https://stackoverflow.com/questions/36990624/back-to-top-button-and-footer-positioning)
+- Implementation of the Wishlist feature in Django was taken from this [Stackoverflow Thread](https://stackoverflow.com/questions/61561263/django-wishlist-feature-implementing)
+- Advice on responsive design and implementing AWS was taken from Code Institute Tutor Support.
 - Integration of the Reviews section of the product page and Wishlist was advised by my mentor, Oluwafemi Medale
 
 ### Media
