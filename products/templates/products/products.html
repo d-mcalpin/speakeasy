@@ -105,6 +105,15 @@
 
                                         </a>
                                     </p>
+                                    <!-- Below shows admin entered product rating, not user product rating -->
+                                    {% if product.rating %}
+                                    <small class="text-muted">
+                                        <i class="fas fa-star mr-1"></i>{{ product.rating }} / 5
+                                    </small>
+                                    {% else %}
+
+                                    <small class="text-muted">No Rating</small>
+                                    {% endif %}
                                     {% endif %}
                                     {% if request.user.is_superuser %}
 
