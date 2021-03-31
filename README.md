@@ -1,55 +1,54 @@
 # Speakeasy Cocktails
 ## Code Institute - Milestone 4 Project
+
+![Ireland Recommends mockups on various devices](https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/speakeasy_mockup.PNG)
 ### Live Heroku Link:
 
-![Speakeasy Cocktails](demo link)
+![Speakeasy Cocktails](https://speakeasy-cocktails.herokuapp.com/)
 
-## Table of Contents
+# Table of Contents
 * [Summary](#summary)
-* [Aim of the Site](#aim-of-the-site)
-* [Scope](#scope)
-    * [User Stories](#user-stories)
-* [Structure](#structure)
-* [Future Features](#future-features)
-* [Information Architecture](#information-architecture)
-* [Skeleton](#skeleton)
-* [Surface](#surface)
-    * [Fonts](#fonts)
-    * [Colours](#colours)
-* [Technologies Used](#technologies-used)
-* [Testing](#testing)
-* [Meeting User Expectations](#meeting-user-expectations)
-* [Deployment](#deployment)
-* [Credits](#credits)
-* [Acknowledgements](#acknowledgements)
+* 1. [Aim of the Site](#aim-of-the-site)
+* 2. [Scope](#scope)
+* 3. [User Stories](#user-stories)
+* 4. [Structure](#structure)
+* 5. [Future Features](#future-features)
+* 6. [Information Architecture](#information-architecture)
+* 7. [Skeleton](#skeleton)
+* 8. [Surface](#surface)
+* 9. [Technologies Used](#technologies-used)
+* 10. [Testing](#testing)
+* 11. [Deployment](#deployment)
+* 12. [Credits](#credits)
 
-## Summary
+
+# Summary
 Speakeasy Cocktails is an online coctail retailer, which specialises in delivering ready to drink cocktails and bar equipment direct to your home.
 
-## Aim of the Site
+## 1. Aim of the Site
 Finding delicious cocktails can sometimes be tricky, particularly if you have to make them yourself.
 
 The aim of the Speakeasy Cocktails website is to make this process finding great cocktails and enjoying them at home an easy and pleasant experience. On each product page, customers have the opportunity to read reviews about the cocktails and equipment that is for sale as well as the opportunit to add products to a wishlist in case they would like to try them in the future.
 
 Products are displayed in an easy to use format where customers can search by keyword or find an item by category from anywhere on the site.
 
-## Scope
+## 2. Scope
 Speakeasy Cocktail's primary target market is cocktail enthusiasts. We hope to encourage frequent purchases by offering customers an easy to use interface and a pleasant experience, while the ability to leave reviews may encourage customers to share knowledge and opinions with other customers. 
 
-## Project Goals
-### Target Audience
+### Project Goals
+#### Target Audience
 - People who are looking to buy cocktails and cocktail equipment
 - People who unique and traditional cocktails
 - People who want to try to make a cocktails at home by purchasing equipment by themselves
 - People who want to read reviews about cocktails that have been left by other users
 
-### Visitor / User Goals
+#### Visitor / User Goals
 - Purchase products in a smooth and secure way
 - Get informed with the products before buying by reading product reviews / product information
 - Inform other customers by leaving my own reviews
 - Add products to my wishlist so that I can order them in the future
 
-### Business Goals (Site Owner's Goals)
+#### Business Goals (Site Owner's Goals)
 - Provide customers with a secure and safe ecommerce shop
 - Establish the shop's brand image
 - Expand their business effectively
@@ -57,7 +56,7 @@ Speakeasy Cocktail's primary target market is cocktail enthusiasts. We hope to e
 
 <div><a href="#table-of-contents">Back to top</a></div>
 
-## User Stories
+## 3. User Stories
 
 - Viewing and Navigation
 
@@ -107,15 +106,14 @@ Speakeasy Cocktail's primary target market is cocktail enthusiasts. We hope to e
 
 <div><a href="#table-of-contents">Back to top</a></div
 
-## Site Features
 
-## Structure
+## 4. Structure
 This website is composed of 7 applications: `home`, `bag`, `checkout`, `products`, `profiles`, 'contact' and 'wishlists'
 
-## Homepage
+### Homepage
 The Speakeasy Homepage is designed as a single page website to provide site visitors with enough information so they can understand what the business is about of this site. This page has minimal amount of information to let the site visitors take next actions. The page is composed of a `Navbar`, a `Hero Image` wiht a 'Shop Now' call to action, an about section and a footer. I used the animate class to add some custom animation to the appearance of text in the hero image and about section.
 
-### Navbar
+#### Navbar
 The Navbar is fixed at the top of all pages across the site, so that the site visitors can easily navigate the whole site.  The Navbar contains the `Brand Name`, `Search Box`, `Wishlist`, `My Account Dropdown` and `Shopping Bag Icon`.
 - Search box: This search box function allows the visitors to search the products on online shop with keywords. The keywords are searched over `name` and `description` field of Product Model, as well as the 'name' field of the Categories Model. (Details of these models will be described at the [Information Architecture](#information-architecture)) 
 - Wishlist: Users can access their wishlist from  
@@ -134,12 +132,12 @@ Navbar for authenticated users
 
 
 
-### About Us Section
+#### About Us Section
 `About Us` section explains what the business is and the brief introduction on how to shop on the site.
 <div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/about_use.PNG" width=700></div>
 
 
-### Footer
+#### Footer
 The footer section consists of two sections: 1. General information about Speakeasy Cocktails and 2. Social Media icons.
 1. General Info: The first footer section includes the physical address of Speakeasy Cocktails and along with a phone number and link to 'Contact Us'.
 
@@ -149,8 +147,9 @@ The footer section consists of two sections: 1. General information about Speake
 
 <div><a href="#table-of-contents">Back to top</a></div>
 
-## Product Page
-### Online Shop Page
+### Product Page
+
+#### Online Shop 
 By clicking 'Shop Now' on the homepage, users are directed to the online shop or 'Products' page. This page is filtered with  by pricr rating or category using the links in the 'main navbar'. 
 - Sort Filter: On the right hand side of the page or in the centre on mobile view. This allows users to filter products by price, name, category or rating if applicable.
 <div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/products_sort.PNG" width=700></div>
@@ -159,7 +158,7 @@ By clicking 'Shop Now' on the homepage, users are directed to the online shop or
 
 - Product Card: The products are displayed in cards that have `Product Name`, `Price` and 'Category' displayed below their respective images. By clicking on the product image, users are directed to the Product Details Page. If the user is logged in as a superuser, an option to Edit or Delete the item is also shown below the image on each card.
 
-Product Card 
+#### Product Card 
 <div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/product_card.PNG" width=300></div>
 
 
@@ -173,26 +172,26 @@ Product Card
 <div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/product_details.PNG" width=700></div>
 
 
-## Shopping Bag Page
+### Shopping Bag Page
 - The left side of this cart page shows the products added to the bag. Customers are able to change the quantity or remove the products in this bag page.
 - On the right side of this bag page, there is an Order Summary section that shows `Bag Total`, `Delivery` and `Grand Total`. This way, customers are able to check the order summary at first glance even if they have added a lot of products to the shopping bag.
 
 <div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/shopping_bag.PNG" width=700></div>
 
-## Checkout Page
 ### Checkout Page
+#### Checkout Page
 - On the checkout page, customers are asked to fill in delivery details. The delivery details will be populated automatically from the users profile if they are logged in. The billing data is also recorded in Stripe from the billing information added by the customer using a Webhook).
 - Though the customer can complete the checkout process without having an account, if the customer hasn't logged in, the message "Create an account or login to save this information" is shown at the checkout page.
 
 <div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/checkout.PNG" width=700></div>
 
-### Checkout Success Page
+#### Checkout Success Page
 - A thank you message will be displayed after the checkout process as well as the table that holds the order details, users will be imfored via toast message that a confirmation email has been sent to the email address that they provided.
 - A `Keep Shopping` button is placed at the end of the page, and if the customer has been logged into their account, `Back to Profile` will be shown.
 
 <div><a href="#table-of-contents">Back to top</a></div>
 
-## Wishlist Page
+### Wishlist Page
 
 - If a user is registered and logged in, they can add products to their wishlist to view later. The wishlist is accessed by a heart icon at the top right of the main nav bar in desktop view and in the dropdown menu in mobile view. 
 - The Wishlist Page mirrors the All Products Page however only items added by the user are displayed. Each Product Card displays the same information as cards on the Products Page and allows users to click in the product's product details page via the product's image
@@ -201,20 +200,20 @@ Product Card
 <div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/wishlist.PNG" width=700></div>
 
 
-## Profiles Page
+### Profiles Page
 The`My Profile` page is available for authenticated or logged in users and will be shown under the `My Account` Dropdown menu non the navbar.
 
-### My Profile Page
+#### My Profile Page
 - On the Profile Page, authenticated users can 1. Edit `Delivery Information` and 2. View their `Order History`.
 
 <div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/profile.PNG" width=700></div>
 
-## Admin Product Managment
+### Admin Product Managment
 The Product Management link allows authenticated superusers can access the `Add Product` page. Here an administrator of the site can add new products to the site. When logged in as an admin or superuser, the user can also edit or delete products from the Products or Product Details Pages. If non-logged in users try to access the url directly, it will redirect to the sign in page. If a non-superuser tries to access the url, an error message pops up which says that only a superuser can access this page.
 
 <div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/product_management.PNG" width=700></div>
 
-## Contact Page
+### Contact Page
 
 A simple contact form is accessible by a link in the product navigation bar or by clicking `Contact Us` in the footer. Site visitors will fill out fields `name`, `email`, `subject` and `message` when they submit the form. An email with the inquiry from the form will be sent to the admin of the website (handling by django send_mail() functionality).
 
@@ -229,7 +228,7 @@ Base template for allauth has `Back to Home` button at the end of the page, for 
 <div><a href="#table-of-contents">Back to top</a></div>
 
 
-## Future Features
+## 5. Future Features
 
 ### Ratings on Products Page
 I would like to add each product's star rating to the product card on the products page however this would be outside the scope of this project.
@@ -240,7 +239,8 @@ For the most part, one wishlist should be sufficient for users. However, there m
 ### Customer Service Chatbot
 Customers are invited to email if they have any queries or issues with their orders. In instances where customers have queries that could be dealt with quickly and in real-time, I would like to investigate the practicality of a chatbot. This could improve the user experience and save them time as they would not have to partake in a back-and-forth email chain. 
 
-## Information Architecture
+## 6. Information Architecture
+
 ### Database Choice
 While this project was in development, it utilised the SQLite3 database, but once deployed to Heroku, a PostgresSQL database was used.
 
@@ -251,14 +251,15 @@ The main models are: Products, Profiles, Reviews, Orders, and Wishlists. Models 
 
 ![Database Schema](https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/speakeasy_schema.PNG)
 
-# Skeleton
-##  Wireframes
+## 7.Skeleton
 
-Wireframes were created with [balsamiq](https://balsamiq.com/) and [moqups](https://moqups.com/).
+###  Wireframes
+
+Wireframes were created with [balsamiq](https://balsamiq.com/).
 
 The [Speakeasy Desktop Wireframes are available here]()  and the [Speakeasy Mobile Wireframes are available here]() .
 
-## Surface
+## 8. Surface
 ### Fonts
 The Google Font, Lato is used across the site as the most prominent font. It was chosen as it is very legible, even in paragraphs with text, and it works well across web and mobile devices.
 
@@ -277,7 +278,8 @@ The colorr scheme is important as this is one of the first things site visitors 
 - Favicon: I got the Martini favicon from the site [Freepik](https://www.flaticon.com/authors/freepik) and [www.flaticon.com](https://www.flaticon.com/).
 
 
-## Technologies Used
+## 9. Technologies Used
+
 ### Languages 
 HTML & CSS were used for the basic site structure and styling 
 
@@ -317,10 +319,10 @@ Python was used to handle data procured from the database.
 
 [Code Beautify](https://codebeautify.org/) was used to format HTML files and ensure consistency in spacing.
 
-## Testing
+## 10. Testing
 The testing process, issues encountered, and any known issues can be found in the [testing.md](https://github.com/d-mcalpin/speakeasy/blob/master/TESTING.md) file.
 
-## Deployment
+## 11. Deployment
 ### Local Deployment
 If you would like to explore or further develop this project locally, you can clone it and deploy it locally:
 * Navigate to the [Speakeasy project repository](https://github.com/d-mcalpin/speakeasy)
@@ -494,9 +496,49 @@ arn:aws:s3:::bucket
 * Add if statement to settings.py to check for USE_AWS environment variable
 ```
 if 'USE_AWS' in os.environ:
-    AWS_STORAGE_BUCKET_NAME = 'speakeasy_cocktails'
+    AWS_STORAGE_BUCKET_NAME = 'speakeasy-cocktails'
     AWS_S3_REGION_NAME = 'eu-west-1'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 ```
+## 12. Credits
+
+### Content
+The design and style of my project was initially inspired by elements of the following project:
+- [adamdelancey's Milestone 3 Project, Tips](https://github.com/adamdelancey/ms3-tips)
+
+Some README content and layout was also inspired by the following project:
+- [juanstelling's Milestone 3 Project, Breaktasty](https://github.com/juanstelling/MS3_breaktasty/blob/master/README.md)
+
+The following sources were used for code snippets or inspiration throughout the project:
+
+- Initial instructions for setting up the site were taken from the E-Commerce Site walkthrough from the [Code Institute](https://codeinstitute.net/) Full Stack Developer Course.
+- Integration of the Reviews section of the product page and Wishlist was advised by my mentor, Oluwafemi Medale
+
+### Media
+
+**Images**
+- The homepage image was downloaded from Taryn Elliott's collection of Pexels, available [here](https://www.pexels.com/@taryn-elliott)
+- The product images were sourced from Alexa_Fotos collection on Pixabay: [Available Here](https://pixabay.com/users/alexas_fotos-686414/?tab=about)
+ 
+ 
+**Fonts and Icons**
+- Fonts are from [Google Fonts](https://fonts.google.com/) and icons from [Font Awesome](https://fontawesome.com/)
+
+**Mockups**
+- Mockups were generated using [ami.responsivedesign.is](ami.responsivedesign.is)
+    
+
+### Acknowledgements
+- **Oluwafemi Medale** (My Mentor) - Thank you for your assistance with this project.
+- **The Code Institute Slack Community** - The community was a great source of inspiration and assistance throughout the project.
+- **My Family** for their assistance testing the website and adding reviews.
+- **Code Institute's Student Support** for their assistance throughout this project.
+
+### Disclaimer
+I do not own any of the text written for the individual reviews. All opinions are that of their owners and not of the website. Please contact me in case of any copyright issue and I will happily remove anything.
+
+This project is for educational purposes only.
+
+***
