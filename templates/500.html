@@ -4,12 +4,13 @@
 {% block add_title %}500{% endblock %}
 
 {% block content%}
+<div class="overlay"></div>
     <div class="container text-center">
         <h1>Sorry</h1>
         <p class="fs-6">It looks like there is an issue with the page you are trying to reach.</p>
         <p>Please call back later or take a look at our products</p>
         <div class="my-5">
-            <a href="{% url 'products' %}" class="button">Return to Products</a>
+            <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Return to Products</a>
         </div>
     </div>
 {% endblock %}

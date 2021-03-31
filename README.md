@@ -293,6 +293,12 @@ The colorr scheme is important as this is one of the first things site visitors 
 - Icon: [FontAwesome](https://fontawesome.com/) is used for the main icon library accross the site.
 - Favicon: I got the Martini favicon from the site [Freepik](https://www.flaticon.com/authors/freepik) and [www.flaticon.com](https://www.flaticon.com/).
 
+### Defensive Design
+- The following defensive programming design elements are in place to prevent a negative user experince:
+    - Toast Messaging is used to prevent users from accessing areas of the site that they do not have authorisation for. 
+    - If no images are available for products, a default image will appear instead to prevent no image being shown.
+    - If a user encounters a 404 or 500 error, a custom error page will appear, offering to return users to the products page.
+
 <div><a href="#table-of-contents">Back to top</a></div>
 
 <span id="tech"></span>
