@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 html {
     height: 100%;
 }
@@ -12,9 +19,15 @@ body {
 
 /* from Bulma */
 .icon {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
 }
@@ -28,6 +41,8 @@ body {
 }
 
 .main-logo-link {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -108,6 +123,22 @@ a.category-badge > span.badge:hover {
 .update-link,
 .remove-item {
     cursor: pointer;
+}
+
+input[name="q"]::-webkit-input-placeholder {
+    color: #aab7c4;
+}
+
+input[name="q"]::-moz-placeholder {
+    color: #aab7c4;
+}
+
+input[name="q"]:-ms-input-placeholder {
+    color: #aab7c4;
+}
+
+input[name="q"]::-ms-input-placeholder {
+    color: #aab7c4;
 }
 
 input[name="q"]::placeholder {
@@ -207,6 +238,22 @@ input[name="q"]::placeholder {
     display: none;
 }
 
+.allauth-form-inner-content input::-webkit-input-placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content input::-moz-placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content input:-ms-input-placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content input::-ms-input-placeholder {
+    color: #aab7c4;
+}
+
 .allauth-form-inner-content input::placeholder {
     color: #aab7c4;
 }
@@ -231,7 +278,11 @@ input[name="q"]::placeholder {
     border-radius: 0;
 
     /* standard bootstrap btn transitions */
+    -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
@@ -245,7 +296,7 @@ input[name="q"]::placeholder {
     color: #17a2b8; /* text-info */
 }
 
-/* Product Form */
+/* ---------------Product Form---------------- */
 
 .btn-file {
     position: relative;
@@ -273,7 +324,7 @@ input[name="q"]::placeholder {
     border-radius: 0;
 }
 
-/* fixed top navbar only on medium and up */
+/* -----------fixed top navbar only on medium and up------------ */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -288,7 +339,7 @@ input[name="q"]::placeholder {
     }
 }
 
-/* pad the top a bit when navbar is collapsed on mobile */
+/* ---------pad the top a bit when navbar is collapsed on mobile----------- */
 @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
@@ -336,7 +387,7 @@ input[name="q"]::placeholder {
     }
 }
 
-/* Customer Rating */
+/* -----------------Customer Rating------------------ */
 .store-text-large {
     font-size: 130%;
 }
@@ -378,7 +429,7 @@ input[name="q"]::placeholder {
     margin-top: 50px;
 }
 
-/* -------------/* Footer */
+/* -------------/* Footer -----------------------*/
 ------------------ */ .footer-item {
     padding-top: 50px;
     overflow: hidden;
@@ -420,6 +471,10 @@ input[name="q"]::placeholder {
     transition: all 0.35s ease-in-out;
 }
 
+.footer-contact:hover {
+    text-decoration: none;
+}
+
 .contact:hover {
     color: rgba(0, 136, 122, 1);
     text-decoration: none;
@@ -429,7 +484,7 @@ input[name="q"]::placeholder {
     background-color: rgba(87, 202, 255, 1);
 }
 
-/* Changes to Margins and Padding */
+/* --------------Changes to Margins and Padding Across Site ---------------*/
 
 .content {
     min-height: calc(100vh - 70px);
@@ -475,4 +530,8 @@ input[name="q"]::placeholder {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.error-container {
+    padding-top: 100px;
 }

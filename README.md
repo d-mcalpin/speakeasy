@@ -346,6 +346,8 @@ Python was used to handle data procured from the database.
 
 [Google Drive](www.google.com) was used to store and share the projects Wireframes.
 
+[CSS Autoprefixer](https://autoprefixer.github.io/) was used to add multiple browser webkits to CSS.
+
 <span id="testing"></span>
 
 ## 10. Testing
