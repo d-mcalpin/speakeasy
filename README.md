@@ -129,21 +129,19 @@ The Navbar is fixed at the top of all pages across the site, so that the site vi
 
 
 Navbar for larger screensizes (width > 992px)
-<div align="center"><img src = "#" width=900></div>
+<div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/navbar_signedout.PNG" width=900></div>
 
 Navbar for smaller screensizes (width < 992px)
-<div align="center"><img src = "" width=900></div>
+<div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/mobile_navbar.PNG" width=900></div>
 
 Navbar for authenticated users
-<div align="center"><img src = "" width=900></div>
+<div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/navbar_signedin.PNG" width=900></div>
 
 
-
-<div align="center"><img src = "" width=700></div>
 
 ### About Us Section
 `About Us` section explains what the business is and the brief introduction on how to shop on the site.
-<div align="center"><img src = "" width=700></div>
+<div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/about_use.PNG" width=700></div>
 
 
 ### Footer
@@ -151,7 +149,8 @@ The footer section consists of two sections: 1. General information about Speake
 1. General Info: The first footer section includes the physical address of Speakeasy Cocktails and along with a phone number and link to 'Contact Us'.
 
 2. Social Media Icons: The Social Media icons are linked to the homepages of their respective social media sites, but in a real settting they should be linked to the businesses pages on social media.
-<div align="center"><img src = "#" width=700></div>
+
+<div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/footer.PNG" width=700></div>
 
 <div><a href="#table-of-contents">Back to top</a></div>
 
@@ -159,37 +158,38 @@ The footer section consists of two sections: 1. General information about Speake
 ### Online Shop Page
 By clicking 'Shop Now' on the homepage, users are directed to the online shop or 'Products' page. This page is filtered with  by pricr rating or category using the links in the 'main navbar'. 
 - Sort Filter: On the right hand side of the page or in the centre on mobile view. This allows users to filter products by price, name, category or rating if applicable.
-<div align="center"><img src = "#" width=250></div>
+<div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/products_sort.PNG" width=250></div>
 
 - Result Number: It's shown above the product cards. Customers can see how many results were found in total at a glance.
-<div align="center"><img src = "" width=350></div>
 
 - Product Card: The products are displayed in cards that have `Product Name`, `Price` and 'Category' displayed below their respective images. By clicking on the product image, users are directed to the Product Details Page. If the user is logged in as a superuser, an option to Edit or Delete the item is also shown below the image on each card.
 
 Product Card 
-<div align="center"><img src = "" width=500></div>
+<div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/product_card.PNG" width=500></div>
 
 
 ## Product Detail Page including Reviews
 
 - Product Image: The product image is shown on the left side of the Product Details page (product_detail.html).
 - Product Information: On the right side of the product detail page, there is a `Product Name`, `Price`, `Description`, `Quantity` and `Add to Cart` button. Also for superusers, Edit / Delete option will be shown.
-- Prouct Wishlist: If the user is logged in, they can use the `Add to Wishlist` button to the right of the product image in order to add the pruduct to the users wishlist. If the user is not logged in, they will be asked to register or log in to add the product to their wishlist.
+- Product Wishlist: If the user is logged in, they can use the `Add to Wishlist` button to the right of the product image in order to add the pruduct to the users wishlist. If the user is not logged in, they will be asked to register or log in to add the product to their wishlist.
 - Product Review Section: Users can see the product scores and review messages by other customers. The users can leave a score from 1 to 5, and the average of the scores of the customer reviews is shown on the product page. To leave a product review, the user is asked to log in to their account or register for an account. Also, to delete a review, the customer who left the review needs to log in and the delete option will be visible next to the review after logging in. At the moment, regardless of whether they have purchase history or not, the user is able to leave a review. This is one of the features left to implement to limit it so only the user who actually purchased the product will be allowed to review.
 
-<div align="center"><img src = "#" width=700></div>
+<div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/product_details.PNG" width=700></div>
 
 
 ## Shopping Bag Page
 - The left side of this cart page shows the products added to the bag. Customers are able to change the quantity or remove the products in this bag page.
 - On the right side of this bag page, there is an Order Summary section that shows `Bag Total`, `Delivery` and `Grand Total`. This way, customers are able to check the order summary at first glance even if they have added a lot of products to the shopping bag.
 
-<div align="center"><img src = "#" width=700></div>
+<div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/shopping_bag.PNG" width=700></div>
 
 ## Checkout Page
 ### Checkout Page
 - On the checkout page, customers are asked to fill in delivery details. The delivery details will be populated automatically from the users profile if they are logged in. The billing data is also recorded in Stripe from the billing information added by the customer using a Webhook).
 - Though the customer can complete the checkout process without having an account, if the customer hasn't logged in, the message "Create an account or login to save this information" is shown at the checkout page.
+
+<div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/checkout.PNG" width=700></div>
 
 ### Checkout Success Page
 - A thank you message will be displayed after the checkout process as well as the table that holds the order details, users will be imfored via toast message that a confirmation email has been sent to the email address that they provided.
@@ -203,7 +203,7 @@ Product Card
 - The Wishlist Page mirrors the All Products Page however only items added by the user are displayed. Each Product Card displays the same information as cards on the Products Page and allows users to click in the product's product details page via the product's image
 
 
-<div align="center"><img src = "#" width=700></div>
+<div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/wishlist.PNG" width=700></div>
 
 
 ## Profiles Page
@@ -212,14 +212,17 @@ The`My Profile` page is available for authenticated or logged in users and will 
 ### My Profile Page
 - On the Profile Page, authenticated users can 1. Edit `Delivery Information` and 2. View their `Order History`.
 
+<div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/profile.PNG" width=700></div>
+
 ## Admin Product Managment
 The Product Management link allows authenticated superusers can access the `Add Product` page. Here an administrator of the site can add new products to the site. When logged in as an admin or superuser, the user can also edit or delete products from the Products or Product Details Pages. If non-logged in users try to access the url directly, it will redirect to the sign in page. If a non-superuser tries to access the url, an error message pops up which says that only a superuser can access this page.
+
+<div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/product_management.PNG" width=700></div>
 
 ## Contact Page
 
 A simple contact form is accessible by a link in the product navigation bar or by clicking `Contact Us` in the footer. Site visitors will fill out fields `name`, `email`, `subject` and `message` when they submit the form. An email with the inquiry from the form will be sent to the admin of the website (handling by django send_mail() functionality).
 
-<div align="center"><img src = "" width=700></div>
 
 ## Django-allauth features
 Base template for allauth has `Back to Home` button at the end of the page, for easy navigation for users.
@@ -251,18 +254,18 @@ Looking at the requirements of the project and the site that was planned, it was
 
 The main models are: Products, Profiles, Reviews, Orders, and Wishlists. Models that act to support and work in tandem with these included OrderLineItem, Categories, and WishlistLineItem. 
 
-![Database Schema]()
+![Database Schema](https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/speakeasy_schema.PNG)
 
 # Skeleton
-### Mobile Wireframes
+##  Wireframes
+
+Wireframes were created with [balsamiq](https://balsamiq.com/) and [moqups](https://moqups.com/).
+
+The [Speakeasy Desktop Wireframes]() are available here and the [Speakeasy Mobile Wireframes]() are available here.
 
 ## Surface
 ### Fonts
 The Google Font, Lato is used across the site as the most prominent font. It was chosen as it is very legible, even in paragraphs with text, and it works well across web and mobile devices.
-
-### Wireframes
-Wireframes were created with [balsamiq](https://balsamiq.com/) and [moqups](https://moqups.com/).
-You can find the wireframes [here](#).
 
 ### Brand Identity
 - Vision: Excellent cocktails delivered to users through a visually appealing online store
@@ -271,7 +274,7 @@ You can find the wireframes [here](#).
 ### Colour Scheme
 The colorr scheme is important as this is one of the first things site visitors notice when visiting the site. I chose a blue, teal, white and black scheme for the site's primary colors because they make the website look professional and high-end. I used [Coolors.co](https://coolors.co/) to create a colour pallet, which you can find below.
 
-<p align="center"><img src = ""></p>
+<p align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/speakeasy_palette.png"></p>
 
 ### Typography
 
