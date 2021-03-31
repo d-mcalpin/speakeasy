@@ -224,14 +224,14 @@ Passed all tests.
 
 
 ## LightHouse on Google DevTool
-I used Lighthouse by Google on theHome Page, Products Page, Product Details Page, Wishlist Page and Bag Page.
-<br>Result: 
+I used Lighthouse by Google on https://speakeasy-cocktails.herokuapp.com/. Lighthouse returned a poor performance score based on the loading times of third party elements however SEO and best practices scored high"
+<br>Result: <div align="center"><img src = "https://github.com/d-mcalpin/speakeasy/blob/master/readme_material/lighthouse_speakeasy.PNG" width=700></div>
 
 
 # Code Validation and Formatting 
 ### Validation Tools
 I used these validation tools below for each file.
-- HTML: [W3C HTML Validator](https://validator.w3.org/) *For HTML validator, I passed each URI to validator since the html files contain Django templates.
+- HTML: [W3C HTML Validator](https://validator.w3.org/) *For HTML validator, I passed each URI directly to the validator since the html files contain Django templates.
 - CSS: [W3C CSS validator](https://jigsaw.w3.org/css-validator/)
 - JavaScript: [JSHint](https://jshint.com/)
 - Python: [PEP8 online](http://pep8online.com/)
