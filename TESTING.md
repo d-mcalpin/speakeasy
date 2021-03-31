@@ -3,7 +3,7 @@
 
 1. [Manual Testing](#manual-testing)
     - [Responsiveness](#responsiveness)
-    - [Landing Page](#landing-page)
+    - [Home Page](#home-page)
     - [Navbar](#navbar)
     - [Footer](#footer)
     - [Onlineshop and Products](#onlineshop-and-products)
@@ -39,7 +39,7 @@ These tests were conducted on the deployed site on Heroku.
 ### Verdict:
 Passed all tests.
 
-## Landing Page
+## Home Page
 ### User Stories Tested:
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... | 
 | ----------- | ----------- | ----------- | 
@@ -75,7 +75,7 @@ Passed all tests.
 - Click the social media icons to see if the links work as expected.
 - The layout changes upon different screen sizes.
 ### Result:
-- The link 'Contact' was connected to a wrong link. This issue was fixed when found.
+- All working fine
 ### Verdict:
 Passed all tests.
 
@@ -85,7 +85,7 @@ Passed all tests.
 | ----------- | ----------- | ----------- | 
 | Shopper | Contact the site owners | Find out more about products |
 ### Test conducted:
-- Submit contact Form to see if the admin receives an email
+- Submit the contact form to see if the admin receives an email.
 ### Result:
 - The email was sent after submitting the contact form.
 ### Verdict:
@@ -101,11 +101,11 @@ Passed all tests.
 | Shopper/Site Owner | Leave/View product reviews with scores | Understand which products are popular by the other customers | 
 ### Test conducted:
 - Use various keywords in keyword search and check if it works as expected.
-- Check if the online shop page / the individual product page is displayed without breaking the layout for common screensizes.
+- Check if the products page / the individual product page is displayed without breaking the layout for common screensizes.
 - Navigations such return to previous page button etc don't break accessing by different paths.
 - Check if the quantity counter works as expected and gives an informative error message if the number is outside of the range (1-99).
 ### Result:
-- The layout of the Product Details page for screens less than 992px width was overwrapped. It was fixed by changing the appropriate bootstrap grid system.
+- The layout of the Product Details page for screens less than 992px was slightly too large. It was fixed by changing the appropriate bootstrap grid system.
 ### Verdict:
 Passed all tests.
 
@@ -208,13 +208,13 @@ Passed all tests.
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... | 
 | ----------- | ----------- | ----------- | 
 | Site Owner | Easily add a new product | Make sure the online site has the latest lineups | 
-| Site Owner | Easily add a new blog | Manage blog posts easily on website | 
+| Site Owner | Easily edit a new product | Manage products posts easily on the website | 
 ### Test conducted:
 - Add a product with/without image and check if they are created successfully.
-- If the user is not superuser and accessed to the direct url to Admin Product/Blog Management, they get redirected and informed.
+- If the user is not superuser and accessed to the direct url to Admin Product, they get redirected and informed.
 ### Result:
 - The rating option was included to the add product form. I deleted this because reviews are not needed when adding a new product.
-- They get redirected to the landing page and get information on the toast.
+- Unauthorised users get redirected to the home page and get information on the toast.
 ### Verdict:
 Passed all tests.
 

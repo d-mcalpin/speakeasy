@@ -22,7 +22,7 @@
 - <a href="#deployment">11. Deployment </a>
 - <a href="#credits">12. Credits </a>
 
-# Summary
+## Summary
 Speakeasy Cocktails is an online coctail retailer, which specialises in delivering ready to drink cocktails and bar equipment direct to your home.
 
 <span id="aim"></span>
@@ -555,7 +555,7 @@ The following sources were used for code snippets or inspiration throughout the 
 
 - Initial instructions for setting up the site were taken from the E-Commerce Site walkthrough from the [Code Institute](https://codeinstitute.net/) Full Stack Developer Course.
 - Advice on centering Bootstrap columns was taken from the following [Stakoverflow Thread](https://stackoverflow.com/questions/23682876/centering-the-row-in-bootstrap-with-a-minimum-width)
-- Direction for keeping the footer at the bottom of the page was taken from this [Stackoverflow Thread] (https://stackoverflow.com/questions/36990624/back-to-top-button-and-footer-positioning)
+- Direction for keeping the footer at the bottom of the page was taken from this [Stackoverflow Thread](https://stackoverflow.com/questions/36990624/back-to-top-button-and-footer-positioning)
 - Implementation of the Wishlist feature in Django was taken from this [Stackoverflow Thread](https://stackoverflow.com/questions/61561263/django-wishlist-feature-implementing)
 - Advice on responsive design and implementing AWS was taken from Code Institute Tutor Support.
 - Integration of the Reviews section of the product page and Wishlist was advised by my mentor, Oluwafemi Medale
