@@ -6,7 +6,6 @@
 
 ## Table of Contents
 * [Summary](#summary)
-* [Background](#background)
 * [Aim of the Site](#aim-of-the-site)
 * [Scope](#scope)
     * [User Stories](#user-stories)
@@ -113,13 +112,13 @@ Speakeasy Cocktail's primary target market is cocktail enthusiasts. We hope to e
 
 <div><a href="#table-of-contents">Back to top</a></div
 
-## Features
+## Site Features
 
 ## Existing Features
 This website is composed of 7 applications: `home`, `bag`, `checkout`, `products`, `profiles`, 'contact' and 'wishlists'
 
-## Landing Page
-The Speakeasy Landing Page or Homepage is designed as a single page website to provide site visitors with enough information so they can understand what the business is about of this site. This page has minimal amount of information to let the site visitors take next actions. The page is composed of a `Navbar`, a `Hero Image` wiht a 'Shop Now' call to action, an about section and a footer. I used the animate class to add some custom animation to the appearance of text in the hero image and about section.
+## Homepage
+The Speakeasy Homepage is designed as a single page website to provide site visitors with enough information so they can understand what the business is about of this site. This page has minimal amount of information to let the site visitors take next actions. The page is composed of a `Navbar`, a `Hero Image` wiht a 'Shop Now' call to action, an about section and a footer. I used the animate class to add some custom animation to the appearance of text in the hero image and about section.
 
 ### Navbar
 The Navbar is fixed at the top of all pages across the site, so that the site visitors can easily navigate the whole site.  The Navbar contains the `Brand Name`, `Search Box`, `Wishlist`, `My Account Dropdown` and `Shopping Bag Icon`.
